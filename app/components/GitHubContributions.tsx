@@ -370,7 +370,7 @@ const query = \`
   };
 
   return (
-    <section style={styles.section}>
+    <section id="contributions" style={styles.section}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-8">
