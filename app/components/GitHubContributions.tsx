@@ -16,6 +16,7 @@ const YEARS = Array.from(
 );
 
 interface Contribution { date: string; count: number; level: number; }
+interface ApiResponse  { contributions: Contribution[]; total: Record<string, number>; }
 interface TooltipState { visible: boolean; text: string; x: number; y: number; }
 
 interface TokenSet {
@@ -24,40 +25,6 @@ interface TokenSet {
   accentDim: string; pillBg: string; pillText: string; pillBorder: string;
   cardShadow: string; toggleBg: string; toggleBorder: string; toggleText: string;
   divider: string; dot1: string; dot2: string;
-}
-
-// GitHub GraphQL API response types
-interface GitHubWeek {
-  contributionDays: {
-    date: string;
-    contributionCount: number;
-    contributionLevel: string;
-  }[];
-}
-
-interface GitHubResponse {
-  data?: {
-    user?: {
-      contributionsCollection?: {
-        contributionCalendar?: {
-          totalContributions: number;
-          weeks: GitHubWeek[];
-        };
-      };
-    };
-  };
-  errors?: Array<{ message: string }>;
-}
-
-function getLevelFromGitHub(level: string): number {
-  switch (level) {
-    case 'NONE': return 0;
-    case 'FIRST_QUARTILE': return 1;
-    case 'SECOND_QUARTILE': return 2;
-    case 'THIRD_QUARTILE': return 3;
-    case 'FOURTH_QUARTILE': return 4;
-    default: return 0;
-  }
 }
 
 function getLevel(n: number): number {
@@ -78,14 +45,12 @@ export default function GitHubContributions({
   style: styleProp,
 }: Props) {
   const [year, setYear]       = useState(String(CURRENT_YEAR));
-  const [contributions, setContributions]       = useState<Contribution[]>([]);
-  const [yearTotal, setYearTotal] = useState(0);
+  const [data, setData]       = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError]     = useState(false);
   const [tooltip, setTooltip] = useState<TooltipState>({ visible: false, text: "", x: 0, y: 0 });
-  const [copied, setCopied] = useState(false);
   const [allTimeTotal, setAllTimeTotal] = useState<number | null>(null);
-  const cache   = useRef<Record<string, { contributions: Contribution[]; total: number }>>({});
+  const cache   = useRef<Record<string, ApiResponse>>({});
   const wrapRef = useRef<HTMLDivElement>(null);
 
   const { theme: portfolioTheme } = useTheme();
@@ -101,156 +66,55 @@ export default function GitHubContributions({
   const mutedColor    = tokensProp?.muted   ?? (isDark ? "#94a3b8" : "#64748b");
   const bodyColor     = tokensProp?.body    ?? (isDark ? "#cbd5e1" : "#475569");
   const statBg        = isDark ? "rgba(74, 222, 128, 0.1)" : "rgba(22, 163, 74, 0.08)";
-  const codeBg        = isDark ? "#1e293b" : "#f0fdf4";
-  const codeHeaderBg  = isDark ? "rgba(74, 222, 128, 0.1)" : "rgba(22, 163, 74, 0.1)";
   const tooltipBg     = isDark ? "#1e293b" : "#f0fdf4";
   const tooltipBorder = isDark ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.1)";
   const tooltipColor  = isDark ? "#f4f4f5" : "#111827";
 
-  // GitHub token from env (required for GraphQL API)
-  const githubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
-  
-  // Debug logging
+  // Fetch contributions using jogruber API (no token required)
   useEffect(() => {
-    console.log('GitHubContributions mounted');
-    console.log('Token available:', !!githubToken);
-    console.log('Username:', username);
-  }, []);
-
-  // GitHub GraphQL query for contributions
-  const getContributionsQuery = (login: string, from: string, to: string) => ({
-    query: `
-      query($login: String!, $from: DateTime!, $to: DateTime!) {
-        user(login: $login) {
-          contributionsCollection(from: $from, to: $to) {
-            contributionCalendar {
-              totalContributions
-              weeks {
-                contributionDays {
-                  date
-                  contributionCount
-                  contributionLevel
-                }
-              }
-            }
-          }
-        }
-      }
-    `,
-    variables: { login, from, to }
-  });
-
-  // Fetch contributions for a specific year directly from GitHub
-  const fetchYearContributions = async (targetYear: string): Promise<{ contributions: Contribution[]; total: number } | null> => {
-    if (!githubToken) {
-      console.error('GitHub token not configured. Set NEXT_PUBLIC_GITHUB_TOKEN in .env.local');
-      return null;
+    async function load() {
+      if (cache.current[year]) { setData(cache.current[year]); setLoading(false); return; }
+      setLoading(true); setError(false);
+      try {
+        const res = await fetch(
+          `https://github-contributions-api.jogruber.de/v4/${username}?y=${year}` 
+        );
+        if (!res.ok) throw new Error();
+        const json: ApiResponse = await res.json();
+        cache.current[year] = json;
+        setData(json);
+      } catch { setError(true); }
+      finally { setLoading(false); }
     }
+    load();
+  }, [year, username]);
 
-    const from = `${targetYear}-01-01T00:00:00Z`;
-    const to = `${targetYear}-12-31T23:59:59Z`;
-    
-    try {
-      const res = await fetch('https://api.github.com/graphql', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${githubToken}`,
-        },
-        body: JSON.stringify(getContributionsQuery(username, from, to))
-      });
-      
-      console.log('GitHub API response status:', res.status);
-      
-      if (!res.ok) {
-        const errorText = await res.text();
-        console.error('GitHub API HTTP error:', res.status, errorText);
-        throw new Error(`HTTP ${res.status}`);
-      }
-      
-      const json: GitHubResponse = await res.json();
-      console.log('GitHub API response:', json.data?.user ? 'has user data' : 'no user data', json.errors ? 'has errors' : 'no errors');
-      
-      if (json.errors || !json.data?.user?.contributionsCollection?.contributionCalendar) {
-        console.error('GitHub API error:', json.errors?.[0]?.message || 'No data');
-        return null;
-      }
-      
-      const calendar = json.data.user.contributionsCollection.contributionCalendar;
-      const contribs: Contribution[] = [];
-      
-      calendar.weeks.forEach(week => {
-        week.contributionDays.forEach(day => {
-          contribs.push({
-            date: day.date,
-            count: day.contributionCount,
-            level: getLevelFromGitHub(day.contributionLevel)
-          });
-        });
-      });
-      
-      contribs.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-      
-      return { contributions: contribs, total: calendar.totalContributions };
-    } catch (err) {
-      console.error(`Failed to fetch ${targetYear}:`, err);
-      return null;
-    }
-  };
-
-  // Load all-time total on mount (only if token available)
+  // Load all-time total
   useEffect(() => {
-    if (!githubToken) return;
-    
     async function loadAllTime() {
       let total = 0;
       for (const y of YEARS) {
-        const data = await fetchYearContributions(y);
-        if (data) {
-          cache.current[y] = data;
-          total += data.total;
+        if (!cache.current[y]) {
+          try {
+            const res = await fetch(`https://github-contributions-api.jogruber.de/v4/${username}?y=${y}`);
+            if (res.ok) {
+              const json: ApiResponse = await res.json();
+              cache.current[y] = json;
+              total += json.total[y] || 0;
+            }
+          } catch { /* skip failed years */ }
+        } else {
+          total += cache.current[y].total[y] || 0;
         }
       }
       setAllTimeTotal(total);
     }
     loadAllTime();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [username, githubToken]);
+  }, [username]);
 
-  // Load year data
-  useEffect(() => {
-    if (!githubToken) {
-      setLoading(false);
-      setError(true);
-      return;
-    }
-    
-    async function load() {
-      if (cache.current[year]) { 
-        setContributions(cache.current[year].contributions);
-        setYearTotal(cache.current[year].total);
-        setLoading(false); 
-        return; 
-      }
-      setLoading(true); 
-      setError(false);
-      try {
-        const data = await fetchYearContributions(year);
-        if (data) {
-          cache.current[year] = data;
-          setContributions(data.contributions);
-          setYearTotal(data.total);
-        } else {
-          setError(true);
-        }
-      } catch { setError(true); }
-      finally { setLoading(false); }
-    }
-    load();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [year, username, githubToken]);
-
-  const total = yearTotal;
+  const contributions: Contribution[] = data?.contributions ?? [];
+  const total = data?.total?.[year] ?? contributions.reduce((s, d) => s + d.count, 0);
 
   const streak = (() => {
     let mx = 0, cur = 0;
@@ -260,7 +124,7 @@ export default function GitHubContributions({
 
   const activeDays = contributions.filter(d => d.count > 0).length;
   const best = contributions.length > 0 ? contributions.reduce(
-    (a, b) => (a.count >= b.count ? a : b),
+    (a: Contribution, b: Contribution) => (a.count >= b.count ? a : b),
     { count: 0, date: "", level: 0 } as Contribution
   ) : { count: 0, date: "", level: 0 };
 
@@ -303,31 +167,6 @@ export default function GitHubContributions({
     });
   };
 
-  const codeSnippet = `// GitHub GraphQL API
-const query = \`
-  query {
-    user(login: "${username}") {
-      contributionsCollection {
-        contributionCalendar {
-          totalContributions
-          weeks {
-            contributionDays {
-              date
-              contributionCount
-            }
-          }
-        }
-      }
-    }
-  }
-\`;`;
-
-  const copyCode = () => {
-    navigator.clipboard.writeText(codeSnippet);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1800);
-  };
-
   const styles: Record<string, CSSProperties> = {
     section:     { fontFamily: "'Montserrat', sans-serif", padding: "32px 0 0", backgroundColor: "transparent", ...styleProp },
     card:        { backgroundColor: surface, border: `1px solid ${border}`, borderRadius: 16, padding: "28px 32px", boxShadow: isDark ? "0 4px 20px rgba(74, 222, 128, 0.08)" : "0 4px 20px rgba(0,0,0,0.08)" },
@@ -345,12 +184,6 @@ const query = \`
     graphWrap:   { overflowX: "auto", position: "relative", width: "100%" },
     graphInner:  { position: "relative", display: "inline-block", minWidth: "100%", maxWidth: "100%", background: isDark ? "rgba(30, 41, 59, 0.5)" : "transparent", borderRadius: 8, padding: isDark ? "12px" : "0" },
     legendRow:   { display: "flex", alignItems: "center", gap: 6, marginTop: 10, fontSize: 11, color: mutedColor },
-    codeSection: { marginTop: 20, borderRadius: 10, border: `0.5px solid ${border}`, overflow: "hidden" },
-    codeHeader:  { display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px 14px", background: codeHeaderBg, borderBottom: `0.5px solid ${border}` },
-    codeTitle:   { fontSize: 11, color: mutedColor, letterSpacing: "0.06em", textTransform: "uppercase" },
-    copyBtn:     { fontSize: 11, padding: "3px 10px", borderRadius: 6, border: `0.5px solid ${border}`, background: "transparent", color: bodyColor, cursor: "pointer", fontFamily: "monospace" },
-    noTokenMsg:  { fontSize: 12, color: mutedColor, marginBottom: 12, padding: "8px 12px", background: statBg, borderRadius: 6, borderLeft: `3px solid ${accent}` },
-    codeBody:    { background: codeBg, padding: "14px 16px", fontFamily: "monospace", fontSize: 12, lineHeight: 1.7, overflowX: "auto", whiteSpace: "pre" },
   };
 
   const yearBtnStyle = (y: string): CSSProperties => {
@@ -443,8 +276,7 @@ const query = \`
             borderRadius: 8,
             border: `1px solid ${isDark ? "rgba(248, 113, 113, 0.2)" : "rgba(220, 38, 38, 0.2)"}`
           }}>
-            <strong>Error:</strong> Could not load GitHub data. Please check your token and username.
-            {!githubToken && <div style={{ marginTop: 8, fontSize: 12 }}>No GitHub token found in environment variables.</div>}
+            <strong>Error:</strong> Could not load GitHub data. Please check your username and try again.
           </div>
         ) : (
           <div style={styles.statsRow}>
