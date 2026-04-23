@@ -48,7 +48,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-dark-700/50 hover:bg-primary-500/20 flex items-center justify-center text-gray-400 hover:text-primary-400 transition-all duration-200"
+                  className="w-10 h-10 rounded-lg bg-dark-700/50 hover:bg-primary-500/30 flex items-center justify-center text-primary-400 hover:text-primary-300 transition-all duration-200"
                   aria-label={social.label}
                 >
                   <social.icon className="w-4 h-4" />
@@ -100,10 +100,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-dark-700/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-400 flex items-center gap-1">
             © {currentYear} KWIZERISEZERANO. Made with{' '}
-            <Heart className="w-4 h-4 text-red-400 fill-current" /> and code.
+            <Heart className="w-4 h-4 text-primary-400 fill-current" /> and code.
           </p>
           
           {/* Back to Top */}

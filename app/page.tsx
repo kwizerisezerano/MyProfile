@@ -5,6 +5,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Services from './components/Services'
 import Experience from './components/Experience'
+import GitHubContributions from './components/GitHubContributions'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Skills />
       <Services />
       <Experience />
+      <GitHubContributions />
       <Footer />
     </main>
   )

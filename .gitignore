@@ -1,4 +1,10 @@
 node_modules
 .DS_Store
 .env
+.env.local
+.env.*.local
 package-lock.json
+.next/
+dist/
+*.pack
+*.old

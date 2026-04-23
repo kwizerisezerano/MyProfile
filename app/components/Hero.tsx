@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-dark-900 transition-colors duration-300">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-900/20 via-dark-900 to-dark-900 dark-mode-bg" />
         <div className="absolute inset-0 dot-pattern" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.15) 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(74, 222, 128, 0.15) 1px, transparent 0)`,
           backgroundSize: '40px 40px'
         }} />
       </div>
@@ -67,7 +67,7 @@ export default function Hero() {
                 href="https://github.com/kwizerisezerano/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
+                className="text-primary-400 hover:text-primary-300 transition-colors duration-200"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -76,7 +76,7 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/kwizerisezerano-xxx-127163363/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
+                className="text-primary-400 hover:text-primary-300 transition-colors duration-200"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -85,7 +85,7 @@ export default function Hero() {
                 href="https://x.com/Kwizerisezeran1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
+                className="text-primary-400 hover:text-primary-300 transition-colors duration-200"
                 aria-label="X (Twitter)"
               >
                 <X className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -94,7 +94,7 @@ export default function Hero() {
                 href="https://www.facebook.com/kwizerisezerano.tabitha"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
+                className="text-primary-400 hover:text-primary-300 transition-colors duration-200"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -103,14 +103,14 @@ export default function Hero() {
                 href="https://www.instagram.com/tabithakwizerisezerano/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
+                className="text-primary-400 hover:text-primary-300 transition-colors duration-200"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
                 href="mailto:tabitakwizerisezerano@gmail.com"
-                className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
+                className="text-primary-400 hover:text-primary-300 transition-colors duration-200"
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
