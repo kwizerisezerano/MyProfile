@@ -7,10 +7,9 @@ const currentYear = new Date().getFullYear()
 const footerLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Services', href: '#services' },
   { name: 'Experience', href: '#experience' },
-  { name: 'Contact', href: '#footer' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Contact', href: '#contact' },
 ]
 
 const socialLinks = [
@@ -79,23 +78,22 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Connect */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>Back End Developer</li>
-              <li>Qonics Inc</li>
-              <li>
-                <a href="https://wa.me/250790989830" className="hover:text-primary-400 transition-colors duration-200">
-                  WhatsApp: 0790989830
-                </a>
-              </li>
-              <li>
-                <a href="mailto:tabitakwizerisezerano@gmail.com" className="hover:text-primary-400 transition-colors duration-200">
-                  tabitakwizerisezerano@gmail.com
-                </a>
-              </li>
-            </ul>
+            <h4 className="text-white font-semibold mb-4">Let's Connect</h4>
+            <p className="text-sm text-gray-400 mb-4">
+              Have a project in mind? Let's discuss how we can work together.
+            </p>
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault()
+                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+              }}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm font-medium rounded-lg transition-colors duration-200"
+            >
+              Get in Touch
+            </a>
           </div>
         </div>
 

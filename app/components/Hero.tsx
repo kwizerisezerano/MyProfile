@@ -1,8 +1,11 @@
 'use client'
 
 import { Github, Linkedin, Mail, ChevronDown, Terminal, X, Facebook, Instagram } from 'lucide-react'
+import { useTheme } from './ThemeProvider'
 
 export default function Hero() {
+  const { theme } = useTheme()
+  const isDark = theme === 'dark'
   const scrollToAbout = () => {
     const element = document.querySelector('#about')
     if (element) {
@@ -13,13 +16,15 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+      className={`min-h-screen flex items-center justify-center relative overflow-hidden pt-20 ${isDark ? '' : 'bg-gray-50'}`}
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-dark-900 transition-colors duration-300">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-900/20 via-dark-900 to-dark-900 dark-mode-bg" />
+      <div className={`absolute inset-0 transition-colors duration-300 ${isDark ? 'bg-dark-900' : 'bg-gray-50'}`}>
+        <div className={`absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] ${isDark ? 'from-primary-900/20 via-dark-900 to-dark-900' : 'from-primary-100/50 via-gray-50 to-gray-50'}`} />
         <div className="absolute inset-0 dot-pattern" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(74, 222, 128, 0.15) 1px, transparent 0)`,
+          backgroundImage: isDark 
+            ? `radial-gradient(circle at 1px 1px, rgba(74, 222, 128, 0.15) 1px, transparent 0)`
+            : `radial-gradient(circle at 1px 1px, rgba(22, 163, 74, 0.1) 1px, transparent 0)`,
           backgroundSize: '40px 40px'
         }} />
       </div>
@@ -30,24 +35,25 @@ export default function Hero() {
           {/* Left Column - Text */}
           <div className="text-center lg:text-left">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fade-in">
-              <Terminal className="w-4 h-4 text-primary-400" />
-              <span className="text-sm text-gray-300">Back End Developer @ Qonics Inc</span>
+            <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 animate-fade-in ${isDark ? 'glass' : 'bg-white border border-gray-200 shadow-sm'}`}>
+              <Terminal className={`w-4 h-4 ${isDark ? 'text-primary-400' : 'text-primary-600'}`} />
+              <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>Back End Developer @ Qonics Inc</span>
             </div>
 
             {/* Name */}
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 animate-slide-up">
-              <span className="text-white">KWIZERISE</span>
+              <span className={isDark ? 'text-white' : 'text-gray-900'}>KWIZERISE</span>
               <span className="text-gradient">ZERANO</span>
             </h1>
 
             {/* Description */}
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 max-w-2xl lg:max-w-none animate-slide-up px-2 sm:px-0" style={{ animationDelay: '0.2s' }}>
-              Software Developer specializing in Backend Development with expertise in Golang, Python, Node.js, and cloud technologies. Building scalable, secure, and efficient systems.
+            <p className={`text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-2xl lg:max-w-none animate-slide-up px-2 sm:px-0 ${isDark ? 'text-gray-300' : 'text-gray-600'}`} style={{ animationDelay: '0.2s' }}>
+              Software Developer specializing in Backend Development with expertise in Golang, Python, Node.js, Nuxt.js,Next.js and cloud technologies. Building scalable, secure, and efficient systems.
             </p>
 
             {/* CTA Button */}
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 sm:gap-4 mb-8 sm:mb-12 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+              {/* CTA Button - Same style in both modes: primary-500 bg, white text */}
               <a
                 href="#about"
                 onClick={(e) => {
@@ -55,7 +61,7 @@ export default function Hero() {
                   const element = document.querySelector('#about')
                   if (element) element.scrollIntoView({ behavior: 'smooth' })
                 }}
-                className="px-6 sm:px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-all duration-200 hover:scale-105 w-full sm:w-auto text-center"
+                className="px-6 sm:px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-medium transition-all duration-200 hover:scale-105 w-full sm:w-auto text-center shadow-lg shadow-primary-500/25"
               >
                 About Me
               </a>
@@ -67,7 +73,7 @@ export default function Hero() {
                 href="https://github.com/kwizerisezerano/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-400 hover:text-primary-300 transition-colors duration-200"
+                className={`transition-colors duration-200 ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -76,7 +82,7 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/kwizerisezerano-xxx-127163363/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-400 hover:text-primary-300 transition-colors duration-200"
+                className={`transition-colors duration-200 ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -85,7 +91,7 @@ export default function Hero() {
                 href="https://x.com/Kwizerisezeran1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-400 hover:text-primary-300 transition-colors duration-200"
+                className={`transition-colors duration-200 ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
                 aria-label="X (Twitter)"
               >
                 <X className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -94,7 +100,7 @@ export default function Hero() {
                 href="https://www.facebook.com/kwizerisezerano.tabitha"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-400 hover:text-primary-300 transition-colors duration-200"
+                className={`transition-colors duration-200 ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -103,14 +109,14 @@ export default function Hero() {
                 href="https://www.instagram.com/tabithakwizerisezerano/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-400 hover:text-primary-300 transition-colors duration-200"
+                className={`transition-colors duration-200 ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
                 href="mailto:tabitakwizerisezerano@gmail.com"
-                className="text-primary-400 hover:text-primary-300 transition-colors duration-200"
+                className={`transition-colors duration-200 ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5 sm:w-6 sm:h-6" />

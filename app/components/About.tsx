@@ -81,7 +81,7 @@ export default function About() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 mt-8">
               <div className="glass rounded-xl p-4 text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-primary-400">5+</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary-400">2+</div>
                 <div className="text-xs sm:text-sm text-gray-400 mt-1">Years Experience</div>
               </div>
               <div className="glass rounded-xl p-4 text-center">

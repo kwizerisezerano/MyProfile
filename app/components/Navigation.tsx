@@ -9,15 +9,16 @@ const navItems = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
   { name: 'Services', href: '#services' },
+  { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
   { name: 'Contributions', href: '#contributions' },
-  { name: 'Contact', href: '#footer' },
 ]
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { theme, toggleTheme, mounted } = useTheme()
+  const isDark = theme === 'dark'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,10 +72,21 @@ export default function Navigation() {
                 {item.name}
               </a>
             ))}
+            {/* Get In Touch Button */}
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault()
+                handleNavClick('#contact')
+              }}
+              className="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm font-medium rounded-lg transition-colors duration-200 shadow-lg shadow-primary-500/25"
+            >
+              Get In Touch
+            </a>
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg glass hover:bg-primary-500/20 transition-colors duration-200"
+              className={`p-2 rounded-lg transition-colors duration-200 ${isDark ? 'glass hover:bg-primary-500/20' : 'bg-white border border-gray-200 hover:bg-primary-50 shadow-sm'}`}
               aria-label="Toggle theme"
             >
               {mounted ? (
@@ -93,7 +105,7 @@ export default function Navigation() {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg glass hover:bg-primary-500/20 transition-colors duration-200"
+              className={`p-2 rounded-lg transition-colors duration-200 ${isDark ? 'glass hover:bg-primary-500/20' : 'bg-white border border-gray-200 hover:bg-primary-50 shadow-sm'}`}
               aria-label="Toggle theme"
             >
               {mounted ? (
@@ -108,7 +120,7 @@ export default function Navigation() {
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white p-2"
+              className={`p-2 ${isDark ? 'text-white' : 'text-gray-900'}`}
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
