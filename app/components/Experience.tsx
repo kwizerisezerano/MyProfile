@@ -12,7 +12,7 @@ const experiences = [
     location: 'Current Role',
     period: 'Present',
     description: 'Building efficient, secure, and scalable backend systems. Focus on web development, system analysis, and delivering high-quality solutions to support business goals.',
-    skills: ['Golang', 'Docker', 'PostgreSQL', 'Redis', 'System Design'],
+    skills: ['Golang', 'Docker', 'PostgreSQL', 'Redis'],
   },
   
   // Education (Most Recent First)
@@ -52,7 +52,7 @@ const experiences = [
     location: 'Muhura',
     period: '',
     description: 'Taught coding aligned with networking, equipping students with practical skills for real-world technology challenges.',
-    skills: ['Teaching', 'Networking', 'Programming Basics', 'Mentoring'],
+    skills: ['Teaching', 'Networking', 'Programming Basics'],
   },
   {
     type: 'education',
@@ -61,7 +61,7 @@ const experiences = [
     location: '',
     period: '',
     description: 'Delivered comprehensive coding education integrated with networking concepts, preparing students for technology careers.',
-    skills: ['Education', 'Networking', 'Code Teaching', 'Curriculum Design'],
+    skills: ['Education', 'Networking', 'Code Teaching'],
   },
 ]
 

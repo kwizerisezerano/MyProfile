@@ -37,7 +37,7 @@ export default function Footer() {
               KWIZERISEZERANO
             </a>
             <p className="text-gray-400 text-sm mb-4 max-w-md">
-              Software Developer specializing in Backend Development with expertise in Golang, Python, Node.js, and cloud technologies. Building scalable, secure, and efficient systems.
+              Software Developer specializing in Backend Development with expertise in Golang, Python, Node.js, PHP and cloud technologies. Building scalable, secure, and efficient systems.
             </p>
             {/* Social Links */}
             <div className="flex gap-3">

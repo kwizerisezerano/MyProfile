@@ -48,7 +48,7 @@ export default function Hero() {
 
             {/* Description */}
             <p className={`text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-2xl lg:max-w-none animate-slide-up px-2 sm:px-0 ${isDark ? 'text-gray-300' : 'text-gray-600'}`} style={{ animationDelay: '0.2s' }}>
-              Software Developer specializing in Backend Development with expertise in Golang, Python, Node.js, Nuxt.js,Next.js and cloud technologies. Building scalable, secure, and efficient systems.
+              Software Developer specializing in Backend Development with expertise in Golang, Python, Node.js, PHP and cloud technologies. Building scalable, secure, and efficient systems.
             </p>
 
             {/* CTA Button */}
