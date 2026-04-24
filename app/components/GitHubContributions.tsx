@@ -110,12 +110,6 @@ export default function GitHubContributions({
   // GitHub token from env (required for GraphQL API)
   const githubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
   
-  // Debug logging
-  useEffect(() => {
-    console.log('GitHubContributions mounted');
-    console.log('Token available:', !!githubToken);
-    console.log('Username:', username);
-  }, []);
 
   // GitHub GraphQL query for contributions
   const getContributionsQuery = (login: string, from: string, to: string) => ({
@@ -143,7 +137,6 @@ export default function GitHubContributions({
   // Fetch contributions for a specific year directly from GitHub
   const fetchYearContributions = async (targetYear: string): Promise<{ contributions: Contribution[]; total: number } | null> => {
     if (!githubToken) {
-      console.error('GitHub token not configured. Set NEXT_PUBLIC_GITHUB_TOKEN in .env.local');
       return null;
     }
 
@@ -160,19 +153,15 @@ export default function GitHubContributions({
         body: JSON.stringify(getContributionsQuery(username, from, to))
       });
       
-      console.log('GitHub API response status:', res.status);
       
       if (!res.ok) {
         const errorText = await res.text();
-        console.error('GitHub API HTTP error:', res.status, errorText);
         throw new Error(`HTTP ${res.status}`);
       }
       
       const json: GitHubResponse = await res.json();
-      console.log('GitHub API response:', json.data?.user ? 'has user data' : 'no user data', json.errors ? 'has errors' : 'no errors');
       
       if (json.errors || !json.data?.user?.contributionsCollection?.contributionCalendar) {
-        console.error('GitHub API error:', json.errors?.[0]?.message || 'No data');
         return null;
       }
       
@@ -193,7 +182,6 @@ export default function GitHubContributions({
       
       return { contributions: contribs, total: calendar.totalContributions };
     } catch (err) {
-      console.error(`Failed to fetch ${targetYear}:`, err);
       return null;
     }
   };
