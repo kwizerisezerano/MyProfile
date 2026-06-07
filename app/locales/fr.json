@@ -1,0 +1,269 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "home_name": "KWIZERISEZERANO",
+    "about": "À Propos",
+    "skills": "Compétences",
+    "services": "Services",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "contributions": "Contributions",
+    "contact": "Contactez-moi"
+  },
+  "hero": {
+    "badge": "Développeur Back-End @ Qonics Inc",
+    "greeting": "KWIZERISE",
+    "surname": "ZERANO",
+    "description": "Développeur logiciel spécialisé dans le développement Backend avec une expertise en Golang, Python, Node.js, PHP et les technologies cloud. Création de systèmes évolutifs, sécurisés et efficaces.",
+    "cta": "À Propos de Moi",
+    "scroll": "Défiler vers le bas"
+  },
+  "about": {
+    "title": "À Propos de",
+    "title_highlight": "Moi",
+    "subtitle": "Développeur logiciel spécialisé dans le développement Backend avec une expertise en Golang, Python, Node.js, PHP et les technologies cloud. Création de systèmes évolutifs, sécurisés et efficaces.",
+    "description1": "Actuellement, je travaille en tant que développeur Back-End chez Qonics Inc, où je me concentre sur la création de systèmes efficaces, sécurisés et évolutifs. Mon rôle implique le développement web backend, l'analyse de systèmes et la fourniture de solutions de haute qualité pour soutenir les objectifs commerciaux.",
+    "description2": "Parallèlement au développement, j'aime aussi partager mes connaissances. En tant qu'enseignant au Lycée Saint Alexandre Sauli de Muhura et à la Bright Academy TSS, j'ai enseigné le codage aligné sur les réseaux, dotant les étudiants de compétences pratiques pour les préparer aux défis du monde réel de la technologie.",
+    "stats": {
+      "years": { "value": "2+", "label": "Ans d'Expérience" },
+      "projects": { "value": "20+", "label": "Projets Terminés" },
+      "taught": { "value": "2", "label": "Institutions Enseignées" }
+    },
+    "highlights": {
+      "backend": {
+        "title": "Développement Back-End",
+        "description": "Création de systèmes efficaces, sécurisés et évolutifs à l'aide de frameworks et de bases de données modernes"
+      },
+      "problem_solving": {
+        "title": "Analyse de Problèmes",
+        "description": "Solides compétences en débogage et capacités créatives de résolution de problèmes"
+      },
+      "mentoring": {
+        "title": "Enseignement et Mentorat",
+        "description": "Partage de connaissances en codage et réseaux dans des institutions académiques"
+      },
+      "experience": {
+        "title": "Expérience Industrielle",
+        "description": "Travail avec des institutions académiques et des projets industriels"
+      }
+    }
+  },
+  "skills": {
+    "title": "Compétences",
+    "title_highlight": "Techniques",
+    "subtitle": "Expertise dans plusieurs technologies et frameworks, avec un accent sur le développement backend et l'architecture de systèmes évolutifs.",
+    "top_skills": "Meilleures Compétences",
+    "categories": {
+      "backend": "Développement Backend",
+      "databases": "Bases de Données",
+      "devops": "DevOps et Outils",
+      "expertise": "Expertise Technique"
+    },
+    "job_titles": [
+      "Développeur Back End",
+      "Développeur Logiciel",
+      "Développeur d'Applications",
+      "Ingénieur de Tests Logiciels"
+    ],
+    "top_skills_list": [
+      "Développement Web Back-End",
+      "Opérations Back-end",
+      "Développement d'Applications Web",
+      "Résolution Créative de Problèmes",
+      "Analyse de Problèmes"
+    ],
+    "skill_names": {
+      "golang": "Golang",
+      "python": "Python",
+      "php": "PHP",
+      "nodejs": "Node.js",
+      "fiber": "Fiber",
+      "postgresql": "PostgreSQL",
+      "mysql": "MySQL",
+      "redis": "Redis",
+      "docker": "Docker",
+      "git": "Git",
+      "linux": "Linux",
+      "cicd": "CI/CD",
+      "version_control": "Git et Contrôle de Version"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "title_highlight": "Offerts",
+    "subtitle": "Services complets de développement de logiciels adaptés aux besoins de votre entreprise et favorisant l'innovation.",
+    "cta": "Discutez de Votre Projet",
+    "list": {
+      "android": { "title": "Développement Android", "description": "Création d'applications Android natives avec des frameworks modernes et les meilleures pratiques pour des performances optimales." },
+      "application": { "title": "Développement d'Applications", "description": "Solutions logicielles personnalisées adaptées aux besoins de votre entreprise, du concept au déploiement." },
+      "web_design": { "title": "Design Web", "description": "Création de designs de sites Web visuellement attrayants et conviviaux qui capturent l'identité de votre marque." },
+      "web_dev": { "title": "Développement Web", "description": "Développement Web complet avec un accent sur les systèmes backend évolutifs et les frontends réactifs." },
+      "ux": { "title": "Design de l'Expérience Utilisateur", "description": "Conception d'interfaces utilisateur et d'expériences intuitives qui stimulent l'engagement et la satisfaction." },
+      "testing": { "title": "Tests de Logiciels", "description": "Services de tests complets garantissant la qualité, la fiabilité et les performances de vos applications." },
+      "mobile": { "title": "Développement d'Applications Mobiles", "description": "Applications mobiles multiplateformes et natives pour les appareils iOS et Android." },
+      "security": { "title": "Sécurité de l'Information", "description": "Mise en œuvre des meilleures pratiques de sécurité pour protéger vos applications et vos données contre les menaces." },
+      "database": { "title": "Développement de Bases de Données", "description": "Conception et optimisation d'architectures de bases de données pour la performance, l'évolutivité et la fiabilité." }
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "title_highlight": "Vedettes",
+    "other_title": "Autres",
+    "other_title_highlight": "Projets",
+    "featured_badge": "Vedette",
+    "cta_discuss": "Discuter du Projet",
+    "cta_github": "Voir Plus sur GitHub",
+    "items": {
+      "leazi": {
+        "title": "Leazi",
+        "description": "Plateforme SaaS de gestion immobilière de nouvelle génération",
+        "longDescription": "Leazi est la plateforme SaaS de gestion immobilière de nouvelle génération qui révolutionne la façon dont vous gérez les propriétés, les locataires et les opérations financières. Construite avec une architecture de microservices de pointe, Leazi offre une évolutivité, une sécurité et des performances inégalées pour les professionnels de la gestion immobilière du monde entier."
+      },
+      "geco": {
+        "title": "GECO Rwanda",
+        "description": "Leader des soins de l'épilepsie depuis 2010",
+        "longDescription": "GECO RWANDA se consacre à fournir des soins complets de l'épilepsie, à lutter contre la stigmatisation et à construire des communautés inclusives à travers le Rwanda. Transformer des vies grâce à des soins compatissants depuis 2010."
+      },
+      "tmis": {
+        "title": "Tontine MIS (TMIS)",
+        "description": "Système d'information de gestion de tontine",
+        "longDescription": "Un système d'information complet de gestion de tontine construit avec le framework Nuxt.js. Rationalise les opérations de tontine, la gestion des membres et le suivi financier pour les groupes d'épargne communautaires."
+      },
+      "menya": {
+        "title": "Menya-Tech",
+        "description": "Plateforme d'éducation à la technologie et à l'innovation",
+        "longDescription": "Une plateforme d'apprentissage complète pour l'éducation technologique et l'innovation, prenant en charge le développement de logiciels (SOD), les réseaux, le multimédia, les modules universitaires et les programmes de diplôme technique."
+      },
+      "marketspot": {
+        "title": "Market Spot MIS",
+        "description": "Système d'information de gestion de marché",
+        "longDescription": "Système de gestion de marché intelligent pour le suivi efficace des vendeurs, des étals, des paiements et des opérations de marché."
+      },
+      "smartmarket": {
+        "title": "Smart Market MIS",
+        "description": "Solution intelligente de gestion de marché",
+        "longDescription": "Système de gestion de marché riche en fonctionnalités avec des analyses, un portail pour les vendeurs et des capacités de reporting automatisé."
+      }
+    }
+  },
+  "experience": {
+    "title": "Expérience et",
+    "title_highlight": "Éducation",
+    "subtitle": "Parcours professionnel couvrant l'expérience industrielle et les contributions éducatives.",
+    "sections": {
+      "work": "Travail et Enseignement",
+      "education": "Éducation"
+    },
+    "types": {
+      "work": "Professionnel",
+      "teaching": "Enseignement",
+      "study": "Éducation"
+    },
+    "skill_tags": {
+      "software_engineering": "Génie Logiciel",
+      "database_systems": "Systèmes de Bases de Données",
+      "network_security": "Sécurité Réseau",
+      "teaching": "Enseignement",
+      "networking": "Réseautage",
+      "programming_basics": "Bases de la Programmation",
+      "programming": "Programmation",
+      "it_systems": "Systèmes Informatiques",
+      "database_management": "Gestion de Bases de Données",
+      "education": "Éducation",
+      "code_teaching": "Enseignement du Code",
+      "software_development": "Développement de Logiciels",
+      "database": "Base de Données",
+      "teamwork": "Travail d'Équipe",
+      "golang": "Golang",
+      "docker": "Docker",
+      "postgresql": "PostgreSQL",
+      "redis": "Redis"
+    },
+    "items": {
+      "qonics": {
+        "title": "Développeur Back-End",
+        "company": "Qonics Inc",
+        "location": "Rôle Actuel",
+        "period": "Présent",
+        "description": "Création de systèmes backend efficaces, sécurisés et évolutifs. Accent sur le développement web, l'analyse de systèmes et la fourniture de solutions de haute qualité pour soutenir les objectifs commerciaux."
+      },
+      "ukigali": {
+        "title": "Baccalauréat ès sciences en informatique",
+        "company": "Université de Kigali",
+        "location": "Sept 2025 – Sept 2027",
+        "period": "En cours",
+        "description": "Poursuite d'un baccalauréat ès sciences avec distinction en technologie de l'information, en se concentrant sur les concepts informatiques avancés et les pratiques modernes de développement de logiciels."
+      },
+      "tumba": {
+        "title": "Diplôme Supérieur en Informatique",
+        "company": "RP Tumba",
+        "location": "Janv 2021 – Mai 2025",
+        "period": "Première Classe",
+        "description": "Diplôme supérieur en technologie de l'information avec mention très bien, acquisition de connaissances approfondies en systèmes informatiques, programmation et résolution de problèmes techniques."
+      },
+      "muhura_study": {
+        "title": "Diplôme A2 en Développement de Logiciels",
+        "company": "Lycée Sainte Alexandre Sauli de Muhura",
+        "location": "Janv 2017 – Juil 2019",
+        "period": "Mention: A",
+        "description": "Obtention du diplôme A2 en développement de logiciels avec des bases solides en programmation, réseaux et gestion de bases de données. Développement de compétences pratiques en codage, capacités de résolution de problèmes et expertise en analyse de systèmes à travers des projets pratiques et des activités d'équipe."
+      },
+      "muhura_teach": {
+        "title": "Enseignant - Codage et Réseaux",
+        "company": "Lycée Saint Alexandre Sauli de Muhura",
+        "location": "Muhura",
+        "period": "",
+        "description": "Enseignement du codage aligné sur les réseaux, dotant les étudiants de compétences pratiques pour les défis technologiques du monde réel."
+      },
+      "bright": {
+        "title": "Enseignant - Codage et Réseaux",
+        "company": "Bright Academy TSS",
+        "location": "",
+        "period": "",
+        "description": "Éducation complète au codage intégrée aux concepts de réseau, préparant les étudiants à des carrières technologiques."
+      }
+    }
+  },
+  "contact": {
+    "title": "Entrez en",
+    "title_highlight": "contact",
+    "whatsapp": "Message sur WhatsApp",
+    "location_value": "Kigali, Gisozi, Rwanda",
+    "labels": {
+      "email": "EMAIL",
+      "phone": "TÉLÉPHONE",
+      "location": "EMPLACEMENT"
+    }
+  },
+  "footer": {
+    "description": "Développeur logiciel spécialisé dans le développement Backend avec une expertise en Golang, Python, Node.js, PHP et les technologies cloud. Création de systèmes évolutifs, sécurisés et efficaces.",
+    "quick_links": "Liens Rapides",
+    "connect": "Connectons-nous",
+    "connect_desc": "Vous avez un projet en tête ? Discutons de la manière dont nous pouvons travailler ensemble.",
+    "get_in_touch": "Contactez-nous",
+    "back_to_top": "Retour en haut",
+    "copyright": "© {year} KWIZERISEZERANO. Fait avec Cœur et code."
+  },
+  "github": {
+    "stats": "Statistiques",
+    "total_year": "Total des contributions en {year}",
+    "total_all_time": "Total des contributions (tout le temps)",
+    "view_profile": "Voir le profil",
+    "loading": "Chargement...",
+    "error_load": "Erreur : Impossible de charger les données GitHub. Veuillez vérifier votre jeton et votre nom d'utilisateur.",
+    "error_token": "Aucun jeton GitHub trouvé dans les variables d'environnement.",
+    "stats_labels": {
+      "total": "Total",
+      "active_days": "Jours actifs",
+      "longest_streak": "Plus longue série",
+      "best_day": "Meilleur jour",
+      "days": "jours"
+    },
+    "contribution_rate": "Taux de contribution",
+    "activity_desc": "jours avec activité",
+    "legend_less": "Moins",
+    "legend_more": "Plus",
+    "months": ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sep", "Oct", "Nov", "Déc"],
+    "days": ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"]
+  }
+}

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ExternalLink, Github, ArrowUpRight, Star, Store, BarChart3 } from 'lucide-react'
 import { useTheme } from './ThemeProvider'
+import { useLanguage } from './LanguageProvider'
 
 interface Project {
   id: number
@@ -16,74 +17,75 @@ interface Project {
   featured: boolean
 }
 
-const projects: Project[] = [
-  {
-    id: 1,
-    title: 'Leazi',
-    description: 'Next-Generation Property Management SaaS Platform',
-    longDescription: 'Leazi is the next-generation property management SaaS platform that revolutionizes how you manage properties, tenants, and financial operations. Built with cutting-edge microservices architecture, Leazi offers unmatched scalability, security, and performance for property management professionals worldwide.',
-    image: '/images/projects/leazi.jpg',
-    tags: ['SaaS', 'Microservices', 'React', 'Node.js', 'MongoDB'],
-    link: 'https://leazi.io/',
-    featured: true
-  },
-  {
-    id: 2,
-    title: 'GECO Rwanda',
-    description: 'Leading Epilepsy Care Since 2010',
-    longDescription: 'GECO RWANDA is dedicated to providing comprehensive epilepsy care, fighting stigma, and building inclusive communities across Rwanda. Transforming lives through compassionate care since 2010.',
-    image: '/images/projects/gecorwanda.jpg',
-    tags: ['Healthcare', 'React', 'Next.js', 'Non-profit'],
-    link: 'https://www.gecorwanda.com/',
-    featured: true
-  },
-  {
-    id: 3,
-    title: 'Tontine MIS (TMIS)',
-    description: 'Tontine Management Information System',
-    longDescription: 'A comprehensive Tontine Management Information System built with Nuxt.js framework. Streamlines tontine operations, member management, and financial tracking for community savings groups.',
-    image: '/images/projects/tmis.jpg',
-    tags: ['Nuxt.js', 'Vue.js', 'TypeScript', 'PostgreSQL'],
-    link: '#',
-    github: '#',
-    featured: true
-  },
-  {
-    id: 4,
-    title: 'Menya-Tech',
-    description: 'Technology & Innovation Education Platform',
-    longDescription: 'A comprehensive learning platform for technology and innovation education, supporting Software Development (SOD), Networking, Multimedia, University modules, and Technical Diploma programs.',
-    image: '/images/projects/menyatech.jpg',
-    tags: ['Education', 'LMS', 'React', 'Node.js', 'MongoDB'],
-    link: '#',
-    featured: true
-  },
-  {
-    id: 5,
-    title: 'Market Spot MIS',
-    description: 'Market Management Information System',
-    longDescription: 'Smart market management system for tracking vendors, stalls, payments, and market operations efficiently.',
-    image: '/images/projects/marketspot.jpg',
-    tags: ['MIS', 'React', 'Node.js', 'MySQL'],
-    link: '#',
-    featured: false
-  },
-  {
-    id: 6,
-    title: 'Smart Market MIS',
-    description: 'Intelligent Market Management Solution',
-    longDescription: 'Feature-rich market management system with analytics, vendor portal, and automated reporting capabilities.',
-    image: '/images/projects/smartmarket.jpg',
-    tags: ['MIS', 'Analytics', 'React', 'Firebase'],
-    link: '#',
-    featured: false
-  }
-]
-
 export default function Projects() {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
   const { theme } = useTheme()
+  const { t } = useLanguage()
   const isDark = theme === 'dark'
+
+  const projects: Project[] = [
+    {
+      id: 1,
+      title: t('projects.items.leazi.title'),
+      description: t('projects.items.leazi.description'),
+      longDescription: t('projects.items.leazi.longDescription'),
+      image: '/images/projects/leazi.jpg',
+      tags: ['SaaS', 'Microservices', 'React', 'Node.js', 'MongoDB'],
+      link: 'https://leazi.io/',
+      featured: true
+    },
+    {
+      id: 2,
+      title: t('projects.items.geco.title'),
+      description: t('projects.items.geco.description'),
+      longDescription: t('projects.items.geco.longDescription'),
+      image: '/images/projects/gecorwanda.jpg',
+      tags: ['Healthcare', 'React', 'Next.js', 'Non-profit'],
+      link: 'https://www.gecorwanda.com/',
+      featured: true
+    },
+    {
+      id: 3,
+      title: t('projects.items.tmis.title'),
+      description: t('projects.items.tmis.description'),
+      longDescription: t('projects.items.tmis.longDescription'),
+      image: '/images/projects/tmis.jpg',
+      tags: ['Nuxt.js', 'Vue.js', 'TypeScript', 'PostgreSQL'],
+      link: '#',
+      github: '#',
+      featured: true
+    },
+    {
+      id: 4,
+      title: t('projects.items.menya.title'),
+      description: t('projects.items.menya.description'),
+      longDescription: t('projects.items.menya.longDescription'),
+      image: '/images/projects/menyatech.jpg',
+      tags: ['Education', 'LMS', 'React', 'Node.js', 'MongoDB'],
+      link: '#',
+      featured: true
+    },
+    {
+      id: 5,
+      title: t('projects.items.marketspot.title'),
+      description: t('projects.items.marketspot.description'),
+      longDescription: t('projects.items.marketspot.longDescription'),
+      image: '/images/projects/marketspot.jpg',
+      tags: ['MIS', 'React', 'Node.js', 'MySQL'],
+      link: '#',
+      featured: false
+    },
+    {
+      id: 6,
+      title: t('projects.items.smartmarket.title'),
+      description: t('projects.items.smartmarket.description'),
+      longDescription: t('projects.items.smartmarket.longDescription'),
+      image: '/images/projects/smartmarket.jpg',
+      tags: ['MIS', 'Analytics', 'React', 'Firebase'],
+      link: '#',
+      featured: false
+    }
+  ]
 
   const featuredProjects = projects.filter(p => p.featured)
   const otherProjects = projects.filter(p => !p.featured)
@@ -94,12 +96,11 @@ export default function Projects() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className={`text-3xl sm:text-4xl font-bold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            Featured <span className="text-gradient">Projects</span>
+            {t('navigation.projects')}
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded-full mb-6" />
+          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded-full mb-4" />
           <p className={`max-w-2xl mx-auto ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-            Showcasing my work on innovative platforms that solve real-world problems 
-            and deliver exceptional user experiences.
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -199,7 +200,7 @@ export default function Projects() {
               <div className="absolute bottom-4 right-4">
                 <div className="bg-primary-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1">
                   <Star className="w-3 h-3 text-white" />
-                  Featured
+                  {t('projects.featured_badge')}
                 </div>
               </div>
             </div>
@@ -210,7 +211,7 @@ export default function Projects() {
         {otherProjects.length > 0 && (
           <div className="mt-12">
             <h3 className={`text-2xl font-bold mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              Other <span className="text-gradient">Projects</span>
+              {t('projects.other_title')} <span className="text-gradient">{t('projects.other_title_highlight')}</span>
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {otherProjects.map((project) => {
@@ -263,7 +264,7 @@ export default function Projects() {
             }}
             className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-primary-500 hover:bg-primary-600 text-white font-medium transition-all duration-300 shadow-lg shadow-primary-500/25"
           >
-            Discuss Project
+            {t('projects.cta_discuss')}
           </a>
           <a
             href="https://github.com/kwizerisezerano"
@@ -272,7 +273,7 @@ export default function Projects() {
             className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-primary-500 hover:bg-primary-600 text-white font-medium transition-all duration-300 shadow-lg shadow-primary-500/25"
           >
             <Github className="w-5 h-5" />
-            View More on GitHub
+            {t('projects.cta_github')}
           </a>
         </div>
       </div>

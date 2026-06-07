@@ -2,9 +2,11 @@
 
 import { Github, Linkedin, Mail, ChevronDown, Terminal, X, Facebook, Instagram } from 'lucide-react'
 import { useTheme } from './ThemeProvider'
+import { useLanguage } from './LanguageProvider'
 
 export default function Hero() {
   const { theme } = useTheme()
+  const { t } = useLanguage()
   const isDark = theme === 'dark'
   const scrollToAbout = () => {
     const element = document.querySelector('#about')
@@ -37,18 +39,18 @@ export default function Hero() {
             {/* Badge */}
             <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 animate-fade-in ${isDark ? 'glass' : 'bg-white border border-gray-200 shadow-sm'}`}>
               <Terminal className={`w-4 h-4 ${isDark ? 'text-primary-400' : 'text-primary-600'}`} />
-              <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>Back End Developer @ Qonics Inc</span>
+              <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{t('hero.badge')}</span>
             </div>
 
             {/* Name */}
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 animate-slide-up">
-              <span className={isDark ? 'text-white' : 'text-gray-900'}>KWIZERISE</span>
-              <span className="text-gradient">ZERANO</span>
+              <span className={isDark ? 'text-white' : 'text-gray-900'}>{t('hero.greeting')}</span>
+              <span className="text-gradient">{t('hero.surname')}</span>
             </h1>
 
             {/* Description */}
             <p className={`text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-2xl lg:max-w-none animate-slide-up px-2 sm:px-0 ${isDark ? 'text-gray-300' : 'text-gray-600'}`} style={{ animationDelay: '0.2s' }}>
-              Software Developer specializing in Backend Development with expertise in Golang, Python, Node.js, PHP and cloud technologies. Building scalable, secure, and efficient systems.
+              {t('hero.description')}
             </p>
 
             {/* CTA Button */}
@@ -63,7 +65,7 @@ export default function Hero() {
                 }}
                 className="px-6 sm:px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-medium transition-all duration-200 hover:scale-105 w-full sm:w-auto text-center shadow-lg shadow-primary-500/25"
               >
-                About Me
+                {t('hero.cta')}
               </a>
             </div>
 
@@ -105,7 +107,7 @@ export default function Hero() {
                 {/* Profile Image */}
                 <img 
                   src="/profile.jpg" 
-                  alt="KWIZERISEZERANO Profile"
+                  alt={`${t('navigation.home_name')} Profile`}
                   className="w-full h-full object-cover object-[50%_30%] scale-125"
                 />
               </div>
@@ -118,7 +120,7 @@ export default function Hero() {
       <button
         onClick={scrollToAbout}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-400 hover:text-primary-400 transition-colors duration-200 animate-pulse-slow"
-        aria-label="Scroll down"
+        aria-label={t('hero.scroll')}
       >
         <ChevronDown className="w-8 h-8" />
       </button>

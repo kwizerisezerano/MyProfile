@@ -1,27 +1,31 @@
 'use client'
 
+import React from 'react'
 import { Code2, Heart, Github, Linkedin, Mail, ArrowUp, X, Facebook, Instagram } from 'lucide-react'
+import { useLanguage } from './LanguageProvider'
 
 const currentYear = new Date().getFullYear()
 
-const footerLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
-]
-
-const socialLinks = [
-  { icon: Github, href: 'https://github.com/kwizerisezerano/', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/kwizerisezerano-xxx-127163363/', label: 'LinkedIn' },
-  { icon: X, href: 'https://x.com/Kwizerisezeran1', label: 'X (Twitter)' },
-  { icon: Facebook, href: 'https://www.facebook.com/kwizerisezerano.tabitha', label: 'Facebook' },
-  { icon: Instagram, href: 'https://www.instagram.com/tabithakwizerisezerano/', label: 'Instagram' },
-  { icon: Mail, href: 'mailto:tabitakwizerisezerano@gmail.com', label: 'Email' },
-]
-
 export default function Footer() {
+  const { t } = useLanguage()
+
+  const footerLinks = [
+    { name: t('navigation.home'), href: '#home' },
+    { name: t('navigation.about'), href: '#about' },
+    { name: t('navigation.experience'), href: '#experience' },
+    { name: t('navigation.projects'), href: '#projects' },
+    { name: t('navigation.contact'), href: '#contact' },
+  ]
+
+  const socialLinks = [
+    { icon: Github, href: 'https://github.com/kwizerisezerano/', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/kwizerisezerano-xxx-127163363/', label: 'LinkedIn' },
+    { icon: X, href: 'https://x.com/Kwizerisezeran1', label: 'X (Twitter)' },
+    { icon: Facebook, href: 'https://www.facebook.com/kwizerisezerano.tabitha', label: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/tabithakwizerisezerano/', label: 'Instagram' },
+    { icon: Mail, href: 'mailto:tabitakwizerisezerano@gmail.com', label: 'Email' },
+  ]
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -32,12 +36,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-2">
-            <a href="#home" className="flex items-center gap-2 text-white font-bold text-xl mb-4">
-              <Code2 className="w-8 h-8 text-primary-400" />
-              KWIZERISEZERANO
+            <a 
+              href="#home"
+              onClick={(e) => {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+              className="text-2xl font-bold text-white mb-4 block"
+            >
+              {t('navigation.home_name')}
             </a>
             <p className="text-gray-400 text-sm mb-4 max-w-md">
-              Software Developer specializing in Backend Development with expertise in Golang, Python, Node.js, PHP and cloud technologies. Building scalable, secure, and efficient systems.
+              {t('footer.description')}
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
@@ -58,7 +68,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-white font-semibold mb-4">{t('footer.quick_links')}</h4>
             <ul className="space-y-2">
               {footerLinks.map((link) => (
                 <li key={link.name}>
@@ -80,9 +90,9 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Let's Connect</h4>
+            <h4 className="text-white font-semibold mb-4">{t('footer.connect')}</h4>
             <p className="text-sm text-gray-400 mb-4">
-              Have a project in mind? Let's discuss how we can work together.
+              {t('footer.connect_desc')}
             </p>
             <a
               href="#contact"
@@ -92,7 +102,7 @@ export default function Footer() {
               }}
               className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm font-medium rounded-lg transition-colors duration-200"
             >
-              Get in Touch
+              {t('footer.get_in_touch')}
             </a>
           </div>
         </div>
@@ -100,8 +110,12 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-400 flex items-center gap-1">
-            © {currentYear} KWIZERISEZERANO. Made with{' '}
-            <Heart className="w-4 h-4 text-primary-400 fill-current" /> and code.
+            {t('footer.copyright').replace('{year}', currentYear.toString()).split('Heart').map((part, i, arr) => (
+              <React.Fragment key={i}>
+                {part}
+                {i < arr.length - 1 && <Heart className="w-4 h-4 text-primary-400 fill-current" />}
+              </React.Fragment>
+            ))}
           </p>
           
           {/* Back to Top */}
@@ -109,7 +123,7 @@ export default function Footer() {
             onClick={scrollToTop}
             className="flex items-center gap-2 text-sm text-gray-400 hover:text-primary-400 transition-colors duration-200"
           >
-            Back to top
+            {t('footer.back_to_top')}
             <ArrowUp className="w-4 h-4" />
           </button>
         </div>

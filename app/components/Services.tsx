@@ -11,58 +11,60 @@ import {
   Bug,
   Layers,
 } from 'lucide-react'
-
-const services = [
-  {
-    icon: Smartphone,
-    title: 'Android Development',
-    description: 'Building native Android applications with modern frameworks and best practices for optimal performance.',
-  },
-  {
-    icon: Code2,
-    title: 'Application Development',
-    description: 'Custom software solutions tailored to your business needs, from concept to deployment.',
-  },
-  {
-    icon: Palette,
-    title: 'Web Design',
-    description: 'Creating visually appealing and user-friendly website designs that capture your brand identity.',
-  },
-  {
-    icon: Globe,
-    title: 'Web Development',
-    description: 'Full-stack web development with focus on scalable backend systems and responsive frontends.',
-  },
-  {
-    icon: Layers,
-    title: 'User Experience Design',
-    description: 'Designing intuitive user interfaces and experiences that drive engagement and satisfaction.',
-  },
-  {
-    icon: Bug,
-    title: 'Software Testing',
-    description: 'Comprehensive testing services ensuring quality, reliability, and performance of your applications.',
-  },
-  {
-    icon: Smartphone,
-    title: 'Mobile App Development',
-    description: 'Cross-platform and native mobile applications for iOS and Android devices.',
-  },
-  {
-    icon: Shield,
-    title: 'Information Security',
-    description: 'Implementing security best practices to protect your applications and data from threats.',
-  },
-  {
-    icon: Database,
-    title: 'Database Development',
-    description: 'Designing and optimizing database architectures for performance, scalability, and reliability.',
-  },
-]
+import { useLanguage } from './LanguageProvider'
 
 export default function Services() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
+  const { t } = useLanguage()
+
+  const services = [
+    {
+      icon: Smartphone,
+      title: t('services.list.android.title'),
+      description: t('services.list.android.description'),
+    },
+    {
+      icon: Code2,
+      title: t('services.list.application.title'),
+      description: t('services.list.application.description'),
+    },
+    {
+      icon: Palette,
+      title: t('services.list.web_design.title'),
+      description: t('services.list.web_design.description'),
+    },
+    {
+      icon: Globe,
+      title: t('services.list.web_dev.title'),
+      description: t('services.list.web_dev.description'),
+    },
+    {
+      icon: Layers,
+      title: t('services.list.ux.title'),
+      description: t('services.list.ux.description'),
+    },
+    {
+      icon: Bug,
+      title: t('services.list.testing.title'),
+      description: t('services.list.testing.description'),
+    },
+    {
+      icon: Smartphone,
+      title: t('services.list.mobile.title'),
+      description: t('services.list.mobile.description'),
+    },
+    {
+      icon: Shield,
+      title: t('services.list.security.title'),
+      description: t('services.list.security.description'),
+    },
+    {
+      icon: Database,
+      title: t('services.list.database.title'),
+      description: t('services.list.database.description'),
+    },
+  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -92,11 +94,11 @@ export default function Services() {
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Services <span className="text-gradient">Offered</span>
+            {t('services.title')} <span className="text-gradient">{t('services.title_highlight')}</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded-full mb-4" />
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Comprehensive software development services tailored to meet your business needs and drive innovation.
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -130,7 +132,7 @@ export default function Services() {
             }}
             className="inline-flex items-center gap-2 px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-all duration-200 hover:scale-105"
           >
-            Discuss Your Project
+            {t('services.cta')}
           </a>
         </div>
       </div>

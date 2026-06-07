@@ -2,72 +2,74 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { Briefcase, GraduationCap, MapPin, Building2 } from 'lucide-react'
-
-const experiences = [
-  // Work Experience
-  {
-    type: 'work',
-    title: 'Back-End Developer',
-    company: 'Qonics Inc',
-    location: 'Current Role',
-    period: 'Present',
-    description: 'Building efficient, secure, and scalable backend systems. Focus on web development, system analysis, and delivering high-quality solutions to support business goals.',
-    skills: ['Golang', 'Docker', 'PostgreSQL', 'Redis'],
-  },
-  
-  // Education (Most Recent First)
-  {
-    type: 'study',
-    title: 'Bachelor of Science in IT',
-    company: 'University of Kigali',
-    location: 'Sep 2025 – Sep 2027',
-    period: 'In Progress',
-    description: 'Pursuing a Bachelor of Science with Honours in Information Technology, focusing on advanced computing concepts and modern software development practices.',
-    skills: ['Software Engineering', 'Database Systems', 'Network Security'],
-  },
-  {
-    type: 'study',
-    title: 'Advanced Diploma in IT',
-    company: 'RP Tumba',
-    location: 'Jan 2021 – May 2025',
-    period: 'First Class',
-    description: 'Completed Advanced Diploma in Information Technology with First Class honors, gaining comprehensive knowledge in IT systems, programming, and technical problem-solving.',
-    skills: ['Programming', 'IT Systems', 'Database Management', 'Networking'],
-  },
-  {
-    type: 'study',
-    title: 'Diploma A2 in Software Development',
-    company: 'Lycée Sainte Alexandre Sauli de Muhura',
-    location: 'Jan 2017 – Jul 2019',
-    period: 'Grade: A',
-    description: 'Completed Diploma A2 in Software Development with strong foundations in programming, networking, and database management. Developed practical coding skills, problem-solving abilities, and system analysis expertise through hands-on projects and team activities.',
-    skills: ['Software Development', 'Networking', 'Database', 'Teamwork'],
-  },
-  
-  // Teaching Experience
-  {
-    type: 'education',
-    title: 'Teacher - Coding & Networking',
-    company: 'Lycee Saint Alexandre Sauli de Muhura',
-    location: 'Muhura',
-    period: '',
-    description: 'Taught coding aligned with networking, equipping students with practical skills for real-world technology challenges.',
-    skills: ['Teaching', 'Networking', 'Programming Basics'],
-  },
-  {
-    type: 'education',
-    title: 'Teacher - Coding & Networking',
-    company: 'Bright Academy TSS',
-    location: '',
-    period: '',
-    description: 'Delivered comprehensive coding education integrated with networking concepts, preparing students for technology careers.',
-    skills: ['Education', 'Networking', 'Code Teaching'],
-  },
-]
+import { useLanguage } from './LanguageProvider'
 
 export default function Experience() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
+  const { t } = useLanguage()
+
+  const experiences = [
+    // Work Experience
+    {
+      type: 'work',
+      title: t('experience.items.qonics.title'),
+      company: t('experience.items.qonics.company'),
+      location: t('experience.items.qonics.location'),
+      period: t('experience.items.qonics.period'),
+      description: t('experience.items.qonics.description'),
+      skills: [t('experience.skill_tags.golang'), t('experience.skill_tags.docker'), t('experience.skill_tags.postgresql'), t('experience.skill_tags.redis')],
+    },
+    
+    // Education (Most Recent First)
+    {
+      type: 'study',
+      title: t('experience.items.ukigali.title'),
+      company: t('experience.items.ukigali.company'),
+      location: t('experience.items.ukigali.location'),
+      period: t('experience.items.ukigali.period'),
+      description: t('experience.items.ukigali.description'),
+      skills: [t('experience.skill_tags.software_engineering'), t('experience.skill_tags.database_systems'), t('experience.skill_tags.network_security')],
+    },
+    {
+      type: 'study',
+      title: t('experience.items.tumba.title'),
+      company: t('experience.items.tumba.company'),
+      location: t('experience.items.tumba.location'),
+      period: t('experience.items.tumba.period'),
+      description: t('experience.items.tumba.description'),
+      skills: [t('experience.skill_tags.programming'), t('experience.skill_tags.it_systems'), t('experience.skill_tags.database_management'), t('experience.skill_tags.networking')],
+    },
+    {
+      type: 'study',
+      title: t('experience.items.muhura_study.title'),
+      company: t('experience.items.muhura_study.company'),
+      location: t('experience.items.muhura_study.location'),
+      period: t('experience.items.muhura_study.period'),
+      description: t('experience.items.muhura_study.description'),
+      skills: [t('experience.skill_tags.software_development'), t('experience.skill_tags.networking'), t('experience.skill_tags.database'), t('experience.skill_tags.teamwork')],
+    },
+    
+    // Teaching Experience
+    {
+      type: 'education',
+      title: t('experience.items.muhura_teach.title'),
+      company: t('experience.items.muhura_teach.company'),
+      location: t('experience.items.muhura_teach.location'),
+      period: t('experience.items.muhura_teach.period'),
+      description: t('experience.items.muhura_teach.description'),
+      skills: [t('experience.skill_tags.teaching'), t('experience.skill_tags.networking'), t('experience.skill_tags.programming_basics')],
+    },
+    {
+      type: 'education',
+      title: t('experience.items.bright.title'),
+      company: t('experience.items.bright.company'),
+      location: t('experience.items.bright.location'),
+      period: t('experience.items.bright.period'),
+      description: t('experience.items.bright.description'),
+      skills: [t('experience.skill_tags.education'), t('experience.skill_tags.networking'), t('experience.skill_tags.code_teaching')],
+    },
+  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -97,11 +99,11 @@ export default function Experience() {
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Experience & <span className="text-gradient">Education</span>
+            {t('experience.title')} <span className="text-gradient">{t('experience.title_highlight')}</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded-full mb-4" />
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Professional journey spanning industry experience and educational contributions.
+            {t('experience.subtitle')}
           </p>
         </div>
 
@@ -112,7 +114,7 @@ export default function Experience() {
             <div className="flex flex-col">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                 <Briefcase className="w-6 h-6 text-primary-400" />
-                Work & Teaching
+                {t('experience.sections.work')}
               </h3>
               <div className="flex-1 flex flex-col gap-6">
                 {experiences.filter(exp => exp.type === 'work' || exp.type === 'education').map((exp, index) => (
@@ -133,7 +135,7 @@ export default function Experience() {
                         )}
                       </div>
                       <span className="text-sm font-medium text-primary-400 uppercase tracking-wider">
-                        {exp.type === 'work' ? 'Professional' : 'Teaching'}
+                        {exp.type === 'work' ? t('experience.types.work') : t('experience.types.teaching')}
                       </span>
                     </div>
 
@@ -182,7 +184,7 @@ export default function Experience() {
             <div className="flex flex-col">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                 <GraduationCap className="w-6 h-6 text-primary-400" />
-                Education
+                {t('experience.sections.education')}
               </h3>
               <div className="flex-1 flex flex-col gap-6">
                 {experiences.filter(exp => exp.type === 'study').map((exp, index) => (
@@ -199,7 +201,7 @@ export default function Experience() {
                         <GraduationCap className="w-4 h-4 text-primary-400" />
                       </div>
                       <span className="text-sm font-medium text-primary-400 uppercase tracking-wider">
-                        Education
+                        {t('experience.types.study')}
                       </span>
                     </div>
 

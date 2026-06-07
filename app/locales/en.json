@@ -1,0 +1,269 @@
+{
+  "navigation": {
+    "home": "Home",
+    "home_name": "KWIZERISEZERANO",
+    "about": "About",
+    "skills": "Skills",
+    "services": "Services",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contributions": "Contributions",
+    "contact": "Get In Touch"
+  },
+  "hero": {
+    "badge": "Back End Developer @ Qonics Inc",
+    "greeting": "KWIZERISE",
+    "surname": "ZERANO",
+    "description": "Software Developer specializing in Backend Development with expertise in Golang, Python, Node.js, PHP and cloud technologies. Building scalable, secure, and efficient systems.",
+    "cta": "About Me",
+    "scroll": "Scroll down"
+  },
+  "about": {
+    "title": "About",
+    "title_highlight": "Me",
+    "subtitle": "Software Developer specializing in Backend Development with expertise in Golang, Python, Node.js, PHP and cloud technologies. Building scalable, secure, and efficient systems.",
+    "description1": "Currently, I am working as a Back-End Developer at Qonics Inc, where I focus on building efficient, secure, and scalable systems. My role involves backend web development, system analysis, and delivering high-quality solutions to support business goals.",
+    "description2": "Alongside development, I also enjoy sharing knowledge. As a Teacher at Lycee Saint Alexandre Sauli de Muhura and Bright Academy TSS, I taught coding aligned with networking, equipping students with practical skills to prepare them for real-world challenges in technology.",
+    "stats": {
+      "years": { "value": "2+", "label": "Years Experience" },
+      "projects": { "value": "20+", "label": "Projects Completed" },
+      "taught": { "value": "2", "label": "Institutions Taught" }
+    },
+    "highlights": {
+      "backend": {
+        "title": "Back-End Development",
+        "description": "Building efficient, secure, and scalable systems using modern frameworks and databases"
+      },
+      "problem_solving": {
+        "title": "Problem Analysis",
+        "description": "Strong debugging skills and creative problem-solving abilities"
+      },
+      "mentoring": {
+        "title": "Teaching & Mentoring",
+        "description": "Sharing knowledge in coding and networking at academic institutions"
+      },
+      "experience": {
+        "title": "Industry Experience",
+        "description": "Working with both academic institutions and industry projects"
+      }
+    }
+  },
+  "skills": {
+    "title": "Technical",
+    "title_highlight": "Skills",
+    "subtitle": "Expertise across multiple technologies and frameworks, with a focus on backend development and scalable system architecture.",
+    "top_skills": "Top Skills",
+    "categories": {
+      "backend": "Backend Development",
+      "databases": "Databases",
+      "devops": "DevOps & Tools",
+      "expertise": "Technical Expertise"
+    },
+    "job_titles": [
+      "Back End Developer",
+      "Software Developer",
+      "Application Developer",
+      "Software Test Engineer"
+    ],
+    "top_skills_list": [
+      "Back-End Web Development",
+      "Back-end Operations",
+      "Web Application Development",
+      "Creative Problem Solving",
+      "Problem Analysis"
+    ],
+    "skill_names": {
+      "golang": "Golang",
+      "python": "Python",
+      "php": "PHP",
+      "nodejs": "Node.js",
+      "fiber": "Fiber",
+      "postgresql": "PostgreSQL",
+      "mysql": "MySQL",
+      "redis": "Redis",
+      "docker": "Docker",
+      "git": "Git",
+      "linux": "Linux",
+      "cicd": "CI/CD",
+      "version_control": "Git & Version Control"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "title_highlight": "Offered",
+    "subtitle": "Comprehensive software development services tailored to meet your business needs and drive innovation.",
+    "cta": "Discuss Your Project",
+    "list": {
+      "android": { "title": "Android Development", "description": "Building native Android applications with modern frameworks and best practices for optimal performance." },
+      "application": { "title": "Application Development", "description": "Custom software solutions tailored to your business needs, from concept to deployment." },
+      "web_design": { "title": "Web Design", "description": "Creating visually appealing and user-friendly website designs that capture your brand identity." },
+      "web_dev": { "title": "Web Development", "description": "Full-stack web development with focus on scalable backend systems and responsive frontends." },
+      "ux": { "title": "User Experience Design", "description": "Designing intuitive user interfaces and experiences that drive engagement and satisfaction." },
+      "testing": { "title": "Software Testing", "description": "Comprehensive testing services ensuring quality, reliability, and performance of your applications." },
+      "mobile": { "title": "Mobile App Development", "description": "Cross-platform and native mobile applications for iOS and Android devices." },
+      "security": { "title": "Information Security", "description": "Implementing security best practices to protect your applications and data from threats." },
+      "database": { "title": "Database Development", "description": "Designing and optimizing database architectures for performance, scalability, and reliability." }
+    }
+  },
+  "projects": {
+    "title": "Featured",
+    "title_highlight": "Projects",
+    "other_title": "Other",
+    "other_title_highlight": "Projects",
+    "featured_badge": "Featured",
+    "cta_discuss": "Discuss Project",
+    "cta_github": "View More on GitHub",
+    "items": {
+      "leazi": {
+        "title": "Leazi",
+        "description": "Next-Generation Property Management SaaS Platform",
+        "longDescription": "Leazi is the next-generation property management SaaS platform that revolutionizes how you manage properties, tenants, and financial operations. Built with cutting-edge microservices architecture, Leazi offers unmatched scalability, security, and performance for property management professionals worldwide."
+      },
+      "geco": {
+        "title": "GECO Rwanda",
+        "description": "Leading Epilepsy Care Since 2010",
+        "longDescription": "GECO RWANDA is dedicated to providing comprehensive epilepsy care, fighting stigma, and building inclusive communities across Rwanda. Transforming lives through compassionate care since 2010."
+      },
+      "tmis": {
+        "title": "Tontine MIS (TMIS)",
+        "description": "Tontine Management Information System",
+        "longDescription": "A comprehensive Tontine Management Information System built with Nuxt.js framework. Streamlines tontine operations, member management, and financial tracking for community savings groups."
+      },
+      "menya": {
+        "title": "Menya-Tech",
+        "description": "Technology & Innovation Education Platform",
+        "longDescription": "A comprehensive learning platform for technology and innovation education, supporting Software Development (SOD), Networking, Multimedia, University modules, and Technical Diploma programs."
+      },
+      "marketspot": {
+        "title": "Market Spot MIS",
+        "description": "Market Management Information System",
+        "longDescription": "Smart market management system for tracking vendors, stalls, payments, and market operations efficiently."
+      },
+      "smartmarket": {
+        "title": "Smart Market MIS",
+        "description": "Intelligent Market Management Solution",
+        "longDescription": "Feature-rich market management system with analytics, vendor portal, and automated reporting capabilities."
+      }
+    }
+  },
+  "experience": {
+    "title": "Experience &",
+    "title_highlight": "Education",
+    "subtitle": "Professional journey spanning industry experience and educational contributions.",
+    "sections": {
+      "work": "Work & Teaching",
+      "education": "Education"
+    },
+    "types": {
+      "work": "Professional",
+      "teaching": "Teaching",
+      "study": "Education"
+    },
+    "skill_tags": {
+      "software_engineering": "Software Engineering",
+      "database_systems": "Database Systems",
+      "network_security": "Network Security",
+      "teaching": "Teaching",
+      "networking": "Networking",
+      "programming_basics": "Programming Basics",
+      "programming": "Programming",
+      "it_systems": "IT Systems",
+      "database_management": "Database Management",
+      "education": "Education",
+      "code_teaching": "Code Teaching",
+      "software_development": "Software Development",
+      "database": "Database",
+      "teamwork": "Teamwork",
+      "golang": "Golang",
+      "docker": "Docker",
+      "postgresql": "PostgreSQL",
+      "redis": "Redis"
+    },
+    "items": {
+      "qonics": {
+        "title": "Back-End Developer",
+        "company": "Qonics Inc",
+        "location": "Current Role",
+        "period": "Present",
+        "description": "Building efficient, secure, and scalable backend systems. Focus on web development, system analysis, and delivering high-quality solutions to support business goals."
+      },
+      "ukigali": {
+        "title": "Bachelor of Science in IT",
+        "company": "University of Kigali",
+        "location": "Sep 2025 – Sep 2027",
+        "period": "In Progress",
+        "description": "Pursuing a Bachelor of Science with Honours in Information Technology, focusing on advanced computing concepts and modern software development practices."
+      },
+      "tumba": {
+        "title": "Advanced Diploma in IT",
+        "company": "RP Tumba",
+        "location": "Jan 2021 – May 2025",
+        "period": "First Class",
+        "description": "Completed Advanced Diploma in Information Technology with First Class honors, gaining comprehensive knowledge in IT systems, programming, and technical problem-solving."
+      },
+      "muhura_study": {
+        "title": "Diploma A2 in Software Development",
+        "company": "Lycée Sainte Alexandre Sauli de Muhura",
+        "location": "Jan 2017 – Jul 2019",
+        "period": "Grade: A",
+        "description": "Completed Diploma A2 in Software Development with strong foundations in programming, networking, and database management. Developed practical coding skills, problem-solving abilities, and system analysis expertise through hands-on projects and team activities."
+      },
+      "muhura_teach": {
+        "title": "Teacher - Coding & Networking",
+        "company": "Lycee Saint Alexandre Sauli de Muhura",
+        "location": "Muhura",
+        "period": "",
+        "description": "Taught coding aligned with networking, equipping students with practical skills for real-world technology challenges."
+      },
+      "bright": {
+        "title": "Teacher - Coding & Networking",
+        "company": "Bright Academy TSS",
+        "location": "",
+        "period": "",
+        "description": "Delivered comprehensive coding education integrated with networking concepts, preparing students for technology careers."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in",
+    "title_highlight": "touch",
+    "whatsapp": "Message on WhatsApp",
+    "location_value": "Kigali, Gisozi, Rwanda",
+    "labels": {
+      "email": "EMAIL",
+      "phone": "PHONE",
+      "location": "LOCATION"
+    }
+  },
+  "footer": {
+    "description": "Software Developer specializing in Backend Development with expertise in Golang, Python, Node.js, PHP and cloud technologies. Building scalable, secure, and efficient systems.",
+    "quick_links": "Quick Links",
+    "connect": "Let's Connect",
+    "connect_desc": "Have a project in mind? Let's discuss how we can work together.",
+    "get_in_touch": "Get in Touch",
+    "back_to_top": "Back to top",
+    "copyright": "© {year} KWIZERISEZERANO. Made with Heart and code."
+  },
+  "github": {
+    "stats": "Stats",
+    "total_year": "Total contributions in {year}",
+    "total_all_time": "Total contributions (all time)",
+    "view_profile": "View Profile",
+    "loading": "Loading...",
+    "error_load": "Error: Could not load GitHub data. Please check your token and username.",
+    "error_token": "No GitHub token found in environment variables.",
+    "stats_labels": {
+      "total": "Total",
+      "active_days": "Active days",
+      "longest_streak": "Longest streak",
+      "best_day": "Best day",
+      "days": "days"
+    },
+    "contribution_rate": "Contribution Rate",
+    "activity_desc": "days with activity",
+    "legend_less": "Less",
+    "legend_more": "More",
+    "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "days": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+  }
+}

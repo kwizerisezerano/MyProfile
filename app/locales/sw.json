@@ -1,0 +1,269 @@
+{
+  "navigation": {
+    "home": "Nyumbani",
+    "home_name": "KWIZERISEZERANO",
+    "about": "Kuhusu",
+    "skills": "Ujuzi",
+    "services": "Huduma",
+    "projects": "Miradi",
+    "experience": "Uzoefu",
+    "contributions": "Michango",
+    "contact": "Wasiliana Nasi"
+  },
+  "hero": {
+    "badge": "Msanidi wa Back End @ Qonics Inc",
+    "greeting": "KWIZERISE",
+    "surname": "ZERANO",
+    "description": "Msanidi wa programu aliyebobea katika Maendeleo ya Backend kwa utaalam katika Golang, Python, Node.js, PHP na teknolojia za wingu. Kujenga mifumo inayoweza kupanuka, salama, na yenye ufanisi.",
+    "cta": "Kuhusu Mimi",
+    "scroll": "Sogeza chini"
+  },
+  "about": {
+    "title": "Kuhusu",
+    "title_highlight": "Mimi",
+    "subtitle": "Msanidi wa programu aliyebobea katika Maendeleo ya Backend kwa utaalam katika Golang, Python, Node.js, PHP na teknolojia za wingu. Kujenga mifumo inayoweza kupanuka, salama, na yenye ufanisi.",
+    "description1": "Hivi sasa, nafanya kazi kama Msanidi wa Back-End katika Qonics Inc, ambapo najikita katika kujenga mifumo yenye ufanisi, salama, na inayoweza kupanuka. Jukumu langu linahusisha maendeleo ya web backend, uchambuzi wa mifumo, na kutoa suluhisho za hali ya juu kusaidia malengo ya biashara.",
+    "description2": "Pamoja na maendeleo, pia nafurahia kushiriki maarifa. Kama Mwalimu katika Lycee Saint Alexandre Sauli de Muhura na Bright Academy TSS, nilifundisha usimbaji unaoendana na mitandao, nikiwapa wanafunzi ujuzi wa vitendo ili kuwaandaa kwa changamoto za ulimwengu wa kweli katika teknolojia.",
+    "stats": {
+      "years": { "value": "2+", "label": "Miaka ya Uzoefu" },
+      "projects": { "value": "20+", "label": "Miradi Iliyokamilika" },
+      "taught": { "value": "2", "label": "Taasisi Nilizofundisha" }
+    },
+    "highlights": {
+      "backend": {
+        "title": "Maendeleo ya Back-End",
+        "description": "Kujenga mifumo yenye ufanisi, salama, na inayoweza kupanuka kwa kutumia mifumo na hifadhidata za kisasa"
+      },
+      "problem_solving": {
+        "title": "Uchambuzi wa Tatizo",
+        "description": "Ujuzi thabiti wa utatuzi na uwezo wa ubunifu wa kutatua matatizo"
+      },
+      "mentoring": {
+        "title": "Kufundisha na Ushauri",
+        "description": "Kushiriki maarifa katika usimbaji na mtandao katika taasisi za kitaaluma"
+      },
+      "experience": {
+        "title": "Uzoefu wa Viwanda",
+        "description": "Kufanya kazi na taasisi za kitaaluma na miradi ya tasnia"
+      }
+    }
+  },
+  "skills": {
+    "title": "Ujuzi wa",
+    "title_highlight": "Kiufundi",
+    "subtitle": "Utaalam katika teknolojia na mifumo anuwai, kwa kuzingatia maendeleo ya backend na usanifu wa mfumo unaoweza kupanuka.",
+    "top_skills": "Ujuzi wa Juu",
+    "categories": {
+      "backend": "Maendeleo ya Backend",
+      "databases": "Hifadhidata",
+      "devops": "DevOps na Zana",
+      "expertise": "Utaalam wa Kiufundi"
+    },
+    "job_titles": [
+      "Msanidi wa Back End",
+      "Msanidi wa Programu",
+      "Msanidi wa Maombi",
+      "Mhandisi wa Majaribio ya Programu"
+    ],
+    "top_skills_list": [
+      "Maendeleo ya Wavuti ya Back-End",
+      "Uendeshaji wa Back-end",
+      "Maendeleo ya Programu ya Wavuti",
+      "Utatuzi wa Kibunifu wa Matatizo",
+      "Uchambuzi wa Tatizo"
+    ],
+    "skill_names": {
+      "golang": "Golang",
+      "python": "Python",
+      "php": "PHP",
+      "nodejs": "Node.js",
+      "fiber": "Fiber",
+      "postgresql": "PostgreSQL",
+      "mysql": "MySQL",
+      "redis": "Redis",
+      "docker": "Docker",
+      "git": "Git",
+      "linux": "Linux",
+      "cicd": "CI/CD",
+      "version_control": "Git na Udhibiti wa Toleo"
+    }
+  },
+  "services": {
+    "title": "Huduma",
+    "title_highlight": "Zinazotolewa",
+    "subtitle": "Huduma kamili za maendeleo ya programu zilizoundwa kukidhi mahitaji ya biashara yako na kuchochea uvumbuzi.",
+    "cta": "Jadili Mradi Wako",
+    "list": {
+      "android": { "title": "Maendeleo ya Android", "description": "Kujenga programu asilia za Android kwa kutumia mifumo ya kisasa na mbinu bora kwa utendaji mzuri." },
+      "application": { "title": "Maendeleo ya Programu", "description": "Suluhisho za programu maalum zilizoundwa kulingana na mahitaji ya biashara yako, kutoka kwa wazo hadi kupelekwa." },
+      "web_design": { "title": "Ubunifu wa Wavuti", "description": "Kutengeneza miundo ya tovuti inayovutia na rahisi kutumia ambayo inawakilisha utambulisho wa chapa yako." },
+      "web_dev": { "title": "Maendeleo ya Wavuti", "description": "Maendeleo kamili ya wavuti kwa kuzingatia mifumo ya backend inayoweza kupanuka na frontends zinazoitikia." },
+      "ux": { "title": "Ubunifu wa Uzoefu wa Mtumiaji", "description": "Kusanifu violesura vya watumiaji na uzoefu ambao unachochea ushiriki na kuridhika." },
+      "testing": { "title": "Upimaji wa Programu", "description": "Huduma kamili za upimaji zinazohakikisha ubora, uaminifu, na utendaji wa programu zako." },
+      "mobile": { "title": "Maendeleo ya Programu ya Simu", "description": "Programu za simu za mkononi za mifumo mbalimbali na asilia kwa vifaa vya iOS na Android." },
+      "security": { "title": "Usalama wa Habari", "description": "Kutekeleza mbinu bora za usalama ili kulinda programu na data zako dhidi ya vitisho." },
+      "database": { "title": "Maendeleo ya Hifadhidata", "description": "Kusanifu na kuboresha usanifu wa hifadhidata kwa utendaji, upanuzi, na uaminifu." }
+    }
+  },
+  "projects": {
+    "title": "Miradi",
+    "title_highlight": "Muhimu",
+    "other_title": "Miradi",
+    "other_title_highlight": "Mingine",
+    "featured_badge": "Iliyoangaziwa",
+    "cta_discuss": "Jadili Mradi",
+    "cta_github": "Tazama Zaidi kwenye GitHub",
+    "items": {
+      "leazi": {
+        "title": "Leazi",
+        "description": "Jukwaa la SaaS la Usimamizi wa Mali la Kizazi Kijacho",
+        "longDescription": "Leazi ni jukwaa la SaaS la usimamizi wa mali la kizazi kijacho ambalo linaleta mapinduzi katika jinsi unavyosimamia mali, wapangaji, na shughuli za kifedha. Imejengwa kwa usanifu wa kisasa wa microservices, Leazi inatoa upanuzi usio na kifani, usalama, na utendaji kwa wataalamu wa usimamizi wa mali ulimwenguni kote."
+      },
+      "geco": {
+        "title": "GECO Rwanda",
+        "description": "Kiongozi katika Huduma ya Kifafa Tangu 2010",
+        "longDescription": "GECO RWANDA imejitolea kutoa huduma kamili ya kifafa, kupambana na unyanyapaa, na kujenga jamii jumuishi kote nchini Rwanda. Kubadilisha maisha kupitia huduma ya upendo tangu 2010."
+      },
+      "tmis": {
+        "title": "Tontine MIS (TMIS)",
+        "description": "Mfumo wa Taarifa wa Usimamizi wa Tontine",
+        "longDescription": "Mfumo kamili wa taarifa wa usimamizi wa tontine uliojengwa kwa mfumo wa Nuxt.js. Unarahisisha shughuli za tontine, usimamizi wa wanachama, na ufuatiliaji wa kifedha kwa vikundi vya kuweka akiba vya jamii."
+      },
+      "menya": {
+        "title": "Menya-Tech",
+        "description": "Jukwaa la Elimu ya Teknolojia na Ubunifu",
+        "longDescription": "Jukwaa kamili la kujifunzia kwa ajili ya elimu ya teknolojia na ubunifu, likisaidia Maendeleo ya Programu (SOD), Mitandao, Multimedia, moduli za Chuo Kikuu, na mipango ya Diploma ya Kiufundi."
+      },
+      "marketspot": {
+        "title": "Market Spot MIS",
+        "description": "Mfumo wa Taarifa wa Usimamizi wa Soko",
+        "longDescription": "Mfumo mahiri wa usimamizi wa soko kwa ajili ya kufuatilia wauzaji, vibanda, malipo, na shughuli za soko kwa ufanisi."
+      },
+      "smartmarket": {
+        "title": "Smart Market MIS",
+        "description": "Suluhisho Mahiri la Usimamizi wa Soko",
+        "longDescription": "Mfumo wa usimamizi wa soko wenye vipengele vingi ukiwa na uchambuzi, tovuti ya wauzaji, na uwezo wa kuripoti otomatiki."
+      }
+    }
+  },
+  "experience": {
+    "title": "Uzoefu na",
+    "title_highlight": "Elimu",
+    "subtitle": "Safari ya kitaaluma inayojumuisha uzoefu wa tasnia na michango ya kielimu.",
+    "sections": {
+      "work": "Kazi na Kufundisha",
+      "education": "Elimu"
+    },
+    "types": {
+      "work": "Kitaaluma",
+      "teaching": "Kufundisha",
+      "study": "Elimu"
+    },
+    "skill_tags": {
+      "software_engineering": "Uhandisi wa Programu",
+      "database_systems": "Mifumo ya Hifadhidata",
+      "network_security": "Usalama wa Mtandao",
+      "teaching": "Kufundisha",
+      "networking": "Mitandao",
+      "programming_basics": "Misingi ya Usimbaji",
+      "programming": "Usimbaji",
+      "it_systems": "Mifumo ya IT",
+      "database_management": "Usimamizi wa Hifadhidata",
+      "education": "Elimu",
+      "code_teaching": "Kufundisha Usimbaji",
+      "software_development": "Maendeleo ya Programu",
+      "database": "Hifadhidata",
+      "teamwork": "Kazi ya Pamoja",
+      "golang": "Golang",
+      "docker": "Docker",
+      "postgresql": "PostgreSQL",
+      "redis": "Redis"
+    },
+    "items": {
+      "qonics": {
+        "title": "Msanidi wa Back-End",
+        "company": "Qonics Inc",
+        "location": "Jukumu la Sasa",
+        "period": "Sasa",
+        "description": "Kujenga mifumo ya backend yenye ufanisi, salama, na inayoweza kupanuka. Kuzingatia maendeleo ya wavuti, uchambuzi wa mifumo, na kutoa suluhisho za hali ya juu kusaidia malengo ya biashara."
+      },
+      "ukigali": {
+        "title": "Bachelor of Science katika IT",
+        "company": "Chuo Kikuu cha Kigali",
+        "location": "Sep 2025 – Sep 2027",
+        "period": "Inaendelea",
+        "description": "Kusoma Bachelor of Science yenye Heshima katika Teknolojia ya Habari, nikijikita katika dhana za juu za kompyuta na mbinu za kisasa za maendeleo ya programu."
+      },
+      "tumba": {
+        "title": "Advanced Diploma katika IT",
+        "company": "RP Tumba",
+        "location": "Jan 2021 – Mei 2025",
+        "period": "Daraja la Kwanza",
+        "description": "Nilikamilisha Advanced Diploma katika Teknolojia ya Habari kwa heshima ya Daraja la Kwanza, nikipata maarifa kamili katika mifumo ya IT, usimbaji, na utatuzi wa matatizo ya kiufundi."
+      },
+      "muhura_study": {
+        "title": "Diploma A2 katika Maendeleo ya Programu",
+        "company": "Lycée Sainte Alexandre Sauli de Muhura",
+        "location": "Jan 2017 – Jul 2019",
+        "period": "Daraja: A",
+        "description": "Nilikamilisha Diploma A2 katika Maendeleo ya Programu nikiwa na misingi thabiti katika usimbaji, mitandao, na usimamizi wa hifadhidata. Nilikua na ujuzi wa vitendo wa usimbaji, uwezo wa kutatua matatizo, na utaalam wa uchambuzi wa mifumo kupitia miradi ya vitendo na shughuli za timu."
+      },
+      "muhura_teach": {
+        "title": "Mwalimu - Usimbaji na Mitandao",
+        "company": "Lycee Saint Alexandre Sauli de Muhura",
+        "location": "Muhura",
+        "period": "",
+        "description": "Nilifundisha usimbaji unaoendana na mitandao, nikiwapa wanafunzi ujuzi wa vitendo kwa changamoto za teknolojia ya ulimwengu wa kweli."
+      },
+      "bright": {
+        "title": "Mwalimu - Usimbaji na Mitandao",
+        "company": "Bright Academy TSS",
+        "location": "",
+        "period": "",
+        "description": "Nilitoa elimu kamili ya usimbaji iliyounganishwa na dhana za mitandao, nikiwaandaa wanafunzi kwa taaluma za teknolojia."
+      }
+    }
+  },
+  "contact": {
+    "title": "Wasiliana",
+    "title_highlight": "nasi",
+    "whatsapp": "Tuma ujumbe kwenye WhatsApp",
+    "location_value": "Kigali, Gisozi, Rwanda",
+    "labels": {
+      "email": "BARUA PEPE",
+      "phone": "SIMU",
+      "location": "MAHALI"
+    }
+  },
+  "footer": {
+    "description": "Msanidi wa programu aliyebobea katika Maendeleo ya Backend kwa utaalam katika Golang, Python, Node.js, PHP na teknolojia za wingu. Kujenga mifumo inayoweza kupanuka, salama, na yenye ufanisi.",
+    "quick_links": "Viungo vya Haraka",
+    "connect": "Wacha Tuungane",
+    "connect_desc": "Una mradi akilini? Wacha tujadili jinsi tunavyoweza kufanya kazi pamoja.",
+    "get_in_touch": "Wasiliana Nasi",
+    "back_to_top": "Rudi juu",
+    "copyright": "© {year} KWIZERISEZERANO. Imetengenezwa na Moyo na nambari."
+  },
+  "github": {
+    "stats": "Takwimu",
+    "total_year": "Jumla ya michango katika {year}",
+    "total_all_time": "Jumla ya michango (wakati wote)",
+    "view_profile": "Tazama Wasifu",
+    "loading": "Inapakia...",
+    "error_load": "Hitilafu: Imeshindwa kupakia data ya GitHub. Tafadhali angalia tokeni na jina lako la mtumiaji.",
+    "error_token": "Hakuna tokeni ya GitHub iliyopatikana.",
+    "stats_labels": {
+      "total": "Jumla",
+      "active_days": "Siku amilifu",
+      "longest_streak": "Mfululizo mrefu zaidi",
+      "best_day": "Siku bora",
+      "days": "siku"
+    },
+    "contribution_rate": "Kiwango cha mchango",
+    "activity_desc": "siku zenye shughuli",
+    "legend_less": "Kidogo",
+    "legend_more": "Zaidi",
+    "months": ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ago", "Sep", "Okt", "Nov", "Des"],
+    "days": ["Jumapili", "Jumatatu", "Jumanne", "Jumatano", "Alhamisi", "Ijumaa", "Jumamosi"]
+  }
+}

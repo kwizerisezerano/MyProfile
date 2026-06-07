@@ -1,0 +1,269 @@
+{
+  "navigation": {
+    "home": "Ahabanza",
+    "home_name": "KWIZERISEZERANO",
+    "about": "Abo Turibo",
+    "skills": "Ubumenyi",
+    "services": "Serivisi",
+    "projects": "Imishinga",
+    "experience": "Inararibonye",
+    "contributions": "Ibyo Twakoze",
+    "contact": "Twandikire"
+  },
+  "hero": {
+    "badge": "Umukannyi wa Porogaramu (Back End) @ Qonics Inc",
+    "greeting": "KWIZERISE",
+    "surname": "ZERANO",
+    "description": "Umukannyi wa porogaramu watazobereye mu gukora inyuma ya porogaramu (Backend) akoresheje Golang, Python, Node.js, PHP n'ikoranabuhanga rya cloud. Gukora sisitemu nini, itekanye kandi ikora neza.",
+    "cta": "Ibyerekeye Njye",
+    "scroll": "Manuka hasi"
+  },
+  "about": {
+    "title": "Ibyerekeye",
+    "title_highlight": "Njye",
+    "subtitle": "Umukannyi wa porogaramu watazobereye mu gukora inyuma ya porogaramu (Backend) akoresheje Golang, Python, Node.js, PHP n'ikoranabuhanga rya cloud. Gukora sisitemu nini, itekanye kandi ikora neza.",
+    "description1": "Kugeza ubu, nkorera muri Qonics Inc nka Back-End Developer, aho nshyira imbaraga mu gukora sisitemu zikora neza, zitekanye kandi zaguka. Inshingano zanjye zirimo iterambere rya web backend, gusesengura sisitemu, no gutanga ibisubizo bifite ireme kugira ngo dushyigikire intego z'ubucuruzi.",
+    "description2": "Usibye iterambere, nishimira no gusangira ubumenyi. Nka mwarimu muri Lycee Saint Alexandre Sauli de Muhura no muri Bright Academy TSS, nigishije gukora porogaramu bijyanye n'imiyoboro y'ikoranabuhanga, naha abanyeshuri ubumenyi ngiro kugira ngo babashe guhangana n'imbogamizi zo mu isi ya tekinoloji.",
+    "stats": {
+      "years": { "value": "2+", "label": "Imyaka y'Inararibonye" },
+      "projects": { "value": "20+", "label": "Imishinga Yarangiye" },
+      "taught": { "value": "2", "label": "Ibigo Nigishijemo" }
+    },
+    "highlights": {
+      "backend": {
+        "title": "Iterambere rya Back-End",
+        "description": "Gukora sisitemu zikora neza, zitekanye kandi zaguka hakoreshejwe uburyo n'ububiko bw'amakuru bigezweho"
+      },
+      "problem_solving": {
+        "title": "Gusesengura Ibibazo",
+        "description": "Ubumenyi bukomeye mu gukosora amakosa n'ubushobozi bwo gukemura ibibazo mu buryo buhanga"
+      },
+      "mentoring": {
+        "title": "Kwigisha n'Ubujyanama",
+        "description": "Gusangira ubumenyi mu gukora porogaramu n'imiyoboro y'ikoranabuhanga mu bigo by'amashuri"
+      },
+      "experience": {
+        "title": "Inararibonye mu Nganda",
+        "description": "Gukorana n'ibigo by'amashuri ndetse n'imishinga yo mu nganda"
+      }
+    }
+  },
+  "skills": {
+    "title": "Ubumenyi bwa",
+    "title_highlight": "Tekiniki",
+    "subtitle": "Inzobere mu kumenya ikoranabuhanga n'uburyo butandukanye, hibandwa ku iterambere rya backend n'imyubakire ya sisitemu zaguka.",
+    "top_skills": "Ubumenyi bw'Imena",
+    "categories": {
+      "backend": "Iterambere rya Backend",
+      "databases": "Ububiko bw'Amakuru",
+      "devops": "DevOps n'Ibikoresho",
+      "expertise": "Inzobere muri Tekiniki"
+    },
+    "job_titles": [
+      "Umukannyi wa Back End",
+      "Umukannyi wa Porogaramu",
+      "Umukannyi w'Izindi Porogaramu",
+      "Inzobere mu Gupima Porogaramu"
+    ],
+    "top_skills_list": [
+      "Iterambere rya Web Back-End",
+      "Imikorere ya Back-end",
+      "Iterambere rya Porogaramu za Web",
+      "Gukemura Ibibazo mu Buryo Buhanga",
+      "Gusesengura Ibibazo"
+    ],
+    "skill_names": {
+      "golang": "Golang",
+      "python": "Python",
+      "php": "PHP",
+      "nodejs": "Node.js",
+      "fiber": "Fiber",
+      "postgresql": "PostgreSQL",
+      "mysql": "MySQL",
+      "redis": "Redis",
+      "docker": "Docker",
+      "git": "Git",
+      "linux": "Linux",
+      "cicd": "CI/CD",
+      "version_control": "Git & Gucunga Verisiyo"
+    }
+  },
+  "services": {
+    "title": "Serivisi",
+    "title_highlight": "Zitangwa",
+    "subtitle": "Serivisi zuzuye zo gukora porogaramu zigenewe gukemura ibibazo by'ubucuruzi bwawe no guteza imbere udushya.",
+    "cta": "Tuganire ku Mushinga Wawe",
+    "list": {
+      "android": { "title": "Iterambere rya Android", "description": "Gukora porogaramu za Android hakoreshejwe uburyo bugezweho kugira ngo zikore neza cyane." },
+      "application": { "title": "Iterambere rya Porogaramu", "description": "Ibisubizo bya porogaramu byihariye bijyanye n'ubucuruzi bwawe, kuva ku gitekerezo kugeza ishyirwa mu bikorwa." },
+      "web_design": { "title": "Gukora Isura y'Imbuga", "description": "Gukora isura y'imbuga za interineti nziza kandi yoroshye gukoreshwa ihuje n'ikirango cyawe." },
+      "web_dev": { "title": "Gukora Imbuga za Interineti", "description": "Iterambere ryuzuye ry'imbuga za interineti ryibanda kuri sisitemu za backend zaguka n'isura y'imbere ijyanye n'igihe." },
+      "ux": { "title": "Gukora Isura y'Abakoresha", "description": "Gukora isura y'abakoresha yoroshye gukoreshwa ituma abantu bishimira porogaramu." },
+      "testing": { "title": "Gupima Porogaramu", "description": "Serivisi zuzuye zo gupima porogaramu zizera ireme, kwizerwa, n'imikorere myiza ya porogaramu zawe." },
+      "mobile": { "title": "Iterambere rya Porogaramu zigendanwa", "description": "Porogaramu zigendanwa zikora ku mbuga zitandukanye (iOS na Android)." },
+      "security": { "title": "Umutekano w'Amakuru", "description": "Gushyira mu bikorwa uburyo bwiza bw'umutekano kugira ngo urinde porogaramu n'amakuru yawe." },
+      "database": { "title": "Iterambere ry'Ububiko bw'Amakuru", "description": "Gushushanya no kunoza imyubakire y'ububiko bw'amakuru kugira ngo zikore neza, zaguke kandi zizerwe." }
+    }
+  },
+  "projects": {
+    "title": "Imishinga",
+    "title_highlight": "y'Imena",
+    "other_title": "Iyindi",
+    "other_title_highlight": "Mishinga",
+    "featured_badge": "Irimo",
+    "cta_discuss": "Tuganire ku mushinga",
+    "cta_github": "Reba ibindi kuri GitHub",
+    "items": {
+      "leazi": {
+        "title": "Leazi",
+        "description": "Uburyo bugezweho bwa SaaS bwo gucunga imitungo",
+        "longDescription": "Leazi ni uburyo bugezweho bwa SaaS bwo gucunga imitungo buhindura uburyo ucunga imitungo, abakodesha, n'imari. Yakozwe n'uburyo bugezweho bwa microservices, Leazi itanga imikorere itangaje n'umutekano ku barimo gucunga imitungo ku isi yose."
+      },
+      "geco": {
+        "title": "GECO Rwanda",
+        "description": "Ubuyobozi mu kwitaho ku ndwara y'igicuri kuva muri 2010",
+        "longDescription": "GECO RWANDA yiyemeje gutanga ubuvuzi bwuzuye bw'igicuri, kurwanya akato, no kubaka imiryango irimo bose mu Rwanda. Guhindura ubuzima binyuze mu kwitaho kuva muri 2010."
+      },
+      "tmis": {
+        "title": "Tontine MIS (TMIS)",
+        "description": "Sisitemu yo gucunga amakuru ya Tontine",
+        "longDescription": "Sisitemu yuzuye yo gucunga amakuru ya Tontine yakozwe na Nuxt.js. Yoroshya imikorere ya tontine, gucunga abanyamuryango, no gukurikirana imari ku matsinda yo kuzigama."
+      },
+      "menya": {
+        "title": "Menya-Tech",
+        "description": "Uburyo bwo kwiga ikoranabuhanga n'udushya",
+        "longDescription": "Uburyo bwuzuye bwo kwiga ikoranabuhanga n'udushya, bushyigikira iterambere rya porogaramu (SOD), Networking, Multimedia, n'ibindi bigo by'amashuri makuru."
+      },
+      "marketspot": {
+        "title": "Market Spot MIS",
+        "description": "Sisitemu yo gucunga amakuru y'isoko",
+        "longDescription": "Sisitemu yo gucunga amakuru y'isoko ku buryo bw'ubwenge yo gukurikirana abacuruzi, ibibanza, n'imikorere y'isoko."
+      },
+      "smartmarket": {
+        "title": "Smart Market MIS",
+        "description": "Igisubizo cy'ubwenge bwo gucunga isoko",
+        "longDescription": "Sisitemu yo gucunga isoko ifite ibikoresho byo gusesengura amakuru n'izindi miterere ifasha mu gutanga raporo."
+      }
+    }
+  },
+  "experience": {
+    "title": "Inararibonye &",
+    "title_highlight": "Uburezi",
+    "subtitle": "Urugendo rw'akazi mu nganda n'uruhare mu burezi.",
+    "sections": {
+      "work": "Akazi & Kwigisha",
+      "education": "Uburezi"
+    },
+    "types": {
+      "work": "Umwuga",
+      "teaching": "Kwigisha",
+      "study": "Uburezi"
+    },
+    "skill_tags": {
+      "software_engineering": "Imiyoborere ya Porogaramu",
+      "database_systems": "Sisitemu z'Ububiko bw'Amakuru",
+      "network_security": "Umutekano w'Imiyoboro",
+      "teaching": "Kwigisha",
+      "networking": "Networking",
+      "programming_basics": "Ibibanze bya Porogaramu",
+      "programming": "Gukora Porogaramu",
+      "it_systems": "Sisitemu za IT",
+      "database_management": "Gucunga Ububiko bw'Amakuru",
+      "education": "Uburezi",
+      "code_teaching": "Kwigisha Code",
+      "software_development": "Iterambere rya Porogaramu",
+      "database": "Ububiko bw'Amakuru",
+      "teamwork": "Gukorera mu Itsinda",
+      "golang": "Golang",
+      "docker": "Docker",
+      "postgresql": "PostgreSQL",
+      "redis": "Redis"
+    },
+    "items": {
+      "qonics": {
+        "title": "Back-End Developer",
+        "company": "Qonics Inc",
+        "location": "Akazi k'ubu",
+        "period": "Kugeza ubu",
+        "description": "Gukora sisitemu za backend zikora neza, zitekanye kandi zaguka. Kwibanda ku iterambere rya web, gusesengura sisitemu, no gutanga ibisubizo byiza."
+      },
+      "ukigali": {
+        "title": "Bachelor of Science muri IT",
+        "company": "University of Kigali",
+        "location": "Gashyantare 2025 – Gashyantare 2027",
+        "period": "Birakomeje",
+        "description": "Kwiga Bachelor of Science in Information Technology, hibandwa kuri tekinoloji zigezweho zo gukora porogaramu."
+      },
+      "tumba": {
+        "title": "Advanced Diploma muri IT",
+        "company": "RP Tumba",
+        "location": "Mutarama 2021 – Gicurasi 2025",
+        "period": "Icyiciro cya mbere",
+        "description": "Narangije Advanced Diploma in Information Technology mu cyiciro cya mbere, mbona ubumenyi bwuzuye muri sisitemu za IT, gukora porogaramu, no gukemura ibibazo."
+      },
+      "muhura_study": {
+        "title": "Diploma A2 muri Software Development",
+        "company": "Lycée Sainte Alexandre Sauli de Muhura",
+        "location": "Mutarama 2017 – Nyakanga 2019",
+        "period": "Intego: A",
+        "description": "Narangije Diploma A2 muri Software Development mfite urufatiro rukomeye muri porogaramu, imiyoboro, no gucunga ububiko bw'amakuru."
+      },
+      "muhura_teach": {
+        "title": "Mwarimu - Coding & Networking",
+        "company": "Lycee Saint Alexandre Sauli de Muhura",
+        "location": "Muhura",
+        "period": "",
+        "description": "Nigishije gukora porogaramu bijyanye n'imiyoboro, naha abanyeshuri ubumenyi ngiro bukenewe."
+      },
+      "bright": {
+        "title": "Mwarimu - Coding & Networking",
+        "company": "Bright Academy TSS",
+        "location": "",
+        "period": "",
+        "description": "Natanze uburezi bwuzuye mu gukora porogaramu, ntegura abanyeshuri ku kazi k'ejo hazaza mu tekinoloji."
+      }
+    }
+  },
+  "contact": {
+    "title": "Tuvugishe",
+    "title_highlight": "Ubu",
+    "whatsapp": "Twandikire kuri WhatsApp",
+    "location_value": "Kigali, Gisozi, u Rwanda",
+    "labels": {
+      "email": "IMEYILI",
+      "phone": "TELEFONI",
+      "location": "AHO TUHEREREYE"
+    }
+  },
+  "footer": {
+    "description": "Umukannyi wa porogaramu watazobereye mu gukora inyuma ya porogaramu (Backend) akoresheje Golang, Python, Node.js, PHP n'ikoranabuhanga rya cloud. Gukora sisitemu nini, itekanye kandi ikora neza.",
+    "quick_links": "Inzira za Hafi",
+    "connect": "Tuvugane",
+    "connect_desc": "Ufite umushinga utekereza? Tuganire uburyo twakorana.",
+    "get_in_touch": "Twandikire",
+    "back_to_top": "Subira Hejuru",
+    "copyright": "© {year} KWIZERISEZERANO. Byakozwe n'Umutima n'ikoranabuhanga."
+  },
+  "github": {
+    "stats": "Imibare",
+    "total_year": "Ibyo wakoze byose mu {year}",
+    "total_all_time": "Ibyo wakoze byose (igihe cyose)",
+    "view_profile": "Reba Porofayile",
+    "loading": "Biratunganywa...",
+    "error_load": "Ikosa: Ntibashije gukurura amakuru ya GitHub. Reba neza 'token' n'izina ukoresha.",
+    "error_token": "Nta 'GitHub token' yabonetse.",
+    "stats_labels": {
+      "total": "Byose",
+      "active_days": "Iminsi wakoze",
+      "longest_streak": "Iminsi wikurikiranya",
+      "best_day": "Umunsi mwiza",
+      "days": "iminsi"
+    },
+    "contribution_rate": "Igipimo cy'ibyakozwe",
+    "activity_desc": "iminsi y'imirimo",
+    "legend_less": "Gake",
+    "legend_more": "Byinshi",
+    "months": ["Mut", "Gas", "Wer", "Mata", "Gic", "Kam", "Nya", "Kan", "Nze", "Uku", "Ugu", "Uzu"],
+    "days": ["Kwe", "Mbe", "Kab", "Gat", "Kan", "Gat", "Sab"]
+  }
+}

@@ -3,22 +3,25 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, Code2, Sun, Moon } from 'lucide-react'
 import { useTheme } from './ThemeProvider'
+import { useLanguage } from './LanguageProvider'
+import LanguageSwitcher from './LanguageSwitcher'
 
 const navItems = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Services', href: '#services' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Contributions', href: '#contributions' },
-  { name: 'Get In Touch', href: '#contact' },
+  { name: 'navigation.home', href: '#home' },
+  { name: 'navigation.about', href: '#about' },
+  { name: 'navigation.skills', href: '#skills' },
+  { name: 'navigation.services', href: '#services' },
+  { name: 'navigation.projects', href: '#projects' },
+  { name: 'navigation.experience', href: '#experience' },
+  { name: 'navigation.contributions', href: '#contributions' },
+  { name: 'navigation.contact', href: '#contact' },
 ]
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { theme, toggleTheme, mounted } = useTheme()
+  const { t } = useLanguage()
   const isDark = theme === 'dark'
 
   useEffect(() => {
@@ -61,7 +64,7 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
-              item.name === 'Get In Touch' ? (
+              item.name === 'navigation.contact' ? (
                 <a
                   key={item.name}
                   href={item.href}
@@ -71,7 +74,7 @@ export default function Navigation() {
                   }}
                   className="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm font-medium rounded-lg transition-colors duration-200 shadow-lg shadow-primary-500/25"
                 >
-                  {item.name}
+                  {t(item.name)}
                 </a>
               ) : (
                 <a
@@ -83,10 +86,14 @@ export default function Navigation() {
                   }}
                   className="text-gray-300 hover:text-primary-400 transition-colors duration-200 text-sm font-medium"
                 >
-                  {item.name}
+                  {t(item.name)}
                 </a>
               )
             ))}
+            
+            <div className="h-6 w-px bg-dark-700" />
+            <LanguageSwitcher />
+
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
@@ -107,6 +114,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button & Theme Toggle */}
           <div className="md:hidden flex items-center gap-2">
+            <LanguageSwitcher />
             <button
               onClick={toggleTheme}
               className={`p-2 rounded-lg transition-colors duration-200 ${isDark ? 'glass hover:bg-primary-500/20' : 'bg-white border border-gray-200 hover:bg-primary-50 shadow-sm'}`}
@@ -146,7 +154,7 @@ export default function Navigation() {
                   }}
                   className={`transition-colors duration-200 py-2 text-sm font-medium ${isDark ? 'text-gray-300 hover:text-primary-400' : 'text-gray-600 hover:text-primary-600'}`}
                 >
-                  {item.name}
+                  {t(item.name)}
                 </a>
               ))}
                           </div>

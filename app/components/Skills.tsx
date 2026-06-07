@@ -2,69 +2,56 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useTheme } from './ThemeProvider'
-
-const skillCategories = [
-  {
-    name: 'Backend Development',
-    skills: [
-      { name: 'Golang', level: 90 },
-      { name: 'Python', level: 85 },
-      { name: 'PHP', level: 80 },
-      { name: 'Node.js', level: 85 },
-      { name: 'Fiber', level: 85 },
-    ],
-  },
-  {
-    name: 'Databases',
-    skills: [
-      { name: 'PostgreSQL', level: 90 },
-      { name: 'MySQL', level: 85 },
-      { name: 'Redis', level: 75 },
-      // { name: 'MongoDB', level: 70 },
-    ],
-  },
-  {
-    name: 'DevOps & Tools',
-    skills: [
-      { name: 'Docker', level: 80 },
-      { name: 'Git', level: 90 },
-      { name: 'Linux', level: 75 },
-      { name: 'CI/CD', level: 70 },
-    ],
-  },
-  {
-    name: 'Technical Expertise',
-    skills: [
-      // { name: 'React', level: 88 },
-      // { name: 'Next.js', level: 85 },
-      // { name: 'Nuxt.js', level: 75 },
-      // { name: 'Vue.js', level: 75 },
-      // { name: 'TypeScript', level: 80 },
-      // { name: 'Tailwind CSS', level: 90 },
-      // { name: 'State Management', level: 82 },
-      // { name: 'Flutter', level: 70 },
-      { name: 'Node.js', level: 85 },
-      // { name: 'MongoDB', level: 78 },
-      // { name: 'API Integration', level: 92 },
-      // { name: 'UI/UX Design', level: 75 },
-      { name: 'Git & Version Control', level: 90 },
-    ],
-  },
-]
-
-const jobTitles = [
-  'Back End Developer',
-  'Software Developer',
-  'Application Developer',
-  // 'Senior Software Development Engineer',
-  'Software Test Engineer',
-]
+import { useLanguage } from './LanguageProvider'
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const { theme } = useTheme()
+  const { t } = useLanguage()
   const isDark = theme === 'dark'
+
+  const skillCategories = [
+    {
+      name: t('skills.categories.backend'),
+      skills: [
+        { name: t('skills.skill_names.golang'), level: 90 },
+        { name: t('skills.skill_names.python'), level: 85 },
+        { name: t('skills.skill_names.php'), level: 80 },
+        { name: t('skills.skill_names.nodejs'), level: 85 },
+        { name: t('skills.skill_names.fiber'), level: 85 },
+      ],
+    },
+    {
+      name: t('skills.categories.databases'),
+      skills: [
+        { name: t('skills.skill_names.postgresql'), level: 90 },
+        { name: t('skills.skill_names.mysql'), level: 85 },
+        { name: t('skills.skill_names.redis'), level: 75 },
+        // { name: 'MongoDB', level: 70 },
+      ],
+    },
+    {
+      name: t('skills.categories.devops'),
+      skills: [
+        { name: t('skills.skill_names.docker'), level: 80 },
+        { name: t('skills.skill_names.git'), level: 90 },
+        { name: t('skills.skill_names.linux'), level: 75 },
+        { name: t('skills.skill_names.cicd'), level: 70 },
+      ],
+    },
+    {
+      name: t('skills.categories.expertise'),
+      skills: [
+        { name: t('skills.skill_names.nodejs'), level: 85 },
+        { name: t('skills.skill_names.version_control'), level: 90 },
+      ],
+    },
+  ]
+
+  const jobTitles = t('skills.job_titles') as unknown as string[]
+
+  const topSkillsList = t('skills.top_skills_list') as unknown as string[]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -94,11 +81,11 @@ export default function Skills() {
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className={`text-3xl sm:text-4xl font-bold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            Technical <span className="text-gradient">Skills</span>
+            {t('skills.title')} <span className="text-gradient">{t('skills.title_highlight')}</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded-full mb-4" />
           <p className={`max-w-2xl mx-auto ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-            Expertise across multiple technologies and frameworks, with a focus on backend development and scalable system architecture.
+            {t('skills.subtitle')}
           </p>
         </div>
 
@@ -148,15 +135,9 @@ export default function Skills() {
 
         {/* Top Skills */}
         <div className={`mt-16 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h3 className={`text-center text-xl font-semibold mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>Top Skills</h3>
+          <h3 className={`text-center text-xl font-semibold mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('skills.top_skills')}</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            {[
-              'Back-End Web Development',
-              'Back-end Operations',
-              'Web Application Development',
-              'Creative Problem Solving',
-              'Problem Analysis',
-            ].map((skill, index) => (
+            {topSkillsList.map((skill, index) => (
               <div
                 key={skill}
                 className={`rounded-xl p-5 text-center transition-all duration-300 group ${isDark ? 'glass hover:bg-primary-600/10' : 'bg-white border border-gray-200 hover:bg-primary-50 shadow-sm'}`}
