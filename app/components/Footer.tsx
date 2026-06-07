@@ -1,6 +1,6 @@
 'use client'
 
-import { Code2, Heart, Github, Linkedin, Mail, ArrowUp, Twitter, Facebook, Instagram } from 'lucide-react'
+import { Code2, Heart, Github, Linkedin, Mail, ArrowUp, X, Facebook, Instagram } from 'lucide-react'
 
 const currentYear = new Date().getFullYear()
 
@@ -15,7 +15,7 @@ const footerLinks = [
 const socialLinks = [
   { icon: Github, href: 'https://github.com/kwizerisezerano/', label: 'GitHub' },
   { icon: Linkedin, href: 'https://www.linkedin.com/in/kwizerisezerano-xxx-127163363/', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://x.com/Kwizerisezeran1', label: 'X (Twitter)' },
+  { icon: X, href: 'https://x.com/Kwizerisezeran1', label: 'X (Twitter)' },
   { icon: Facebook, href: 'https://www.facebook.com/kwizerisezerano.tabitha', label: 'Facebook' },
   { icon: Instagram, href: 'https://www.instagram.com/tabithakwizerisezerano/', label: 'Instagram' },
   { icon: Mail, href: 'mailto:tabitakwizerisezerano@gmail.com', label: 'Email' },

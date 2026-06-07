@@ -69,58 +69,29 @@ export default function Hero() {
 
             {/* Social Links */}
             <div className="flex flex-wrap justify-center lg:justify-start items-center gap-3 sm:gap-4 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <a
-                href="https://github.com/kwizerisezerano/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`transition-colors duration-200 ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
-                aria-label="GitHub"
-              >
-                <Github className="w-5 h-5 sm:w-6 sm:h-6" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/kwizerisezerano-xxx-127163363/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`transition-colors duration-200 ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
-              </a>
-              <a
-                href="https://x.com/Kwizerisezeran1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`transition-colors duration-200 ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
-                aria-label="X (Twitter)"
-              >
-                <X className="w-5 h-5 sm:w-6 sm:h-6" />
-              </a>
-              <a
-                href="https://www.facebook.com/kwizerisezerano.tabitha"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`transition-colors duration-200 ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
-              </a>
-              <a
-                href="https://www.instagram.com/tabithakwizerisezerano/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`transition-colors duration-200 ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
-              </a>
-              <a
-                href="mailto:tabitakwizerisezerano@gmail.com"
-                className={`transition-colors duration-200 ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
-              </a>
+              {[
+                { icon: Github, href: 'https://github.com/kwizerisezerano/', label: 'GitHub' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/kwizerisezerano-xxx-127163363/', label: 'LinkedIn' },
+                { icon: X, href: 'https://x.com/Kwizerisezeran1', label: 'X (Twitter)' },
+                { icon: Facebook, href: 'https://www.facebook.com/kwizerisezerano.tabitha', label: 'Facebook' },
+                { icon: Instagram, href: 'https://www.instagram.com/tabithakwizerisezerano/', label: 'Instagram' },
+                { icon: Mail, href: 'mailto:tabitakwizerisezerano@gmail.com', label: 'Email' },
+              ].map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-200 ${
+                    isDark 
+                      ? 'bg-dark-700/50 hover:bg-primary-500/30 text-primary-400 hover:text-primary-300' 
+                      : 'bg-white border border-gray-200 hover:border-primary-500/50 text-primary-600 hover:text-primary-700 shadow-sm'
+                  }`}
+                  aria-label={social.label}
+                 >
+                   <social.icon className="w-4 h-4" />
+                 </a>
+              ))}
             </div>
           </div>
 
