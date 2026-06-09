@@ -14,15 +14,15 @@ export async function POST(req: NextRequest) {
       req.headers.get('x-real-ip') ||
       'unknown'
 
-    // Get location from IP using free ipapi
+    // Get location from IP using ip-api.com (works on server)
     let country = 'Unknown', city = 'Unknown', flag = '🌍'
     try {
-      const geo = await fetch(`https://ipapi.co/${ip}/json/`)
+      const geo = await fetch(`http://ip-api.com/json/${ip}?fields=country,countryCode,city`)
       const geoData = await geo.json()
-      country = geoData.country_name || 'Unknown'
+      country = geoData.country || 'Unknown'
       city = geoData.city || 'Unknown'
-      flag = geoData.country_code
-        ? `https://flagcdn.com/24x18/${geoData.country_code.toLowerCase()}.png`
+      flag = geoData.countryCode
+        ? `https://flagcdn.com/24x18/${geoData.countryCode.toLowerCase()}.png`
         : '🌍'
     } catch {}
 
