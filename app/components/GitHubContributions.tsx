@@ -109,16 +109,8 @@ export default function GitHubContributions({
   const tooltipBorder = isDark ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.1)";
   const tooltipColor  = isDark ? "#f4f4f5" : "#111827";
 
-  const githubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
-  
-  // Robust token check: must exist, not be "undefined" or "null" strings, and not be empty
-  const hasToken = githubToken && 
-                   githubToken !== "undefined" && 
-                   githubToken !== "null" && 
-                   githubToken.trim() !== "";
-
-  // Only show token error if it's missing AND we are not in loading state
-  const showTokenError = !hasToken && !loading;
+  const hasToken = true;
+  const showTokenError = false;
 
   // GitHub GraphQL query for contributions
   const getContributionsQuery = (login: string, from: string, to: string) => ({
@@ -153,12 +145,9 @@ export default function GitHubContributions({
     const to = `${targetYear}-12-31T23:59:59Z`;
     
     try {
-      const res = await fetch('https://api.github.com/graphql', {
+      const res = await fetch('/api/github', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${githubToken?.trim()}`,
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(getContributionsQuery(username, from, to))
       });
       

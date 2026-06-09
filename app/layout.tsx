@@ -5,6 +5,7 @@ import { ThemeProvider } from './components/ThemeProvider'
 import { LanguageProvider } from './components/LanguageProvider'
 import { Analytics } from '@vercel/analytics/react'
 import Script from 'next/script'
+import VisitorTracker from './components/VisitorTracker'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,6 +41,7 @@ export default function RootLayout({
           <ThemeProvider>{children}</ThemeProvider>
         </LanguageProvider>
         <Analytics />
+        <VisitorTracker />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-50FSR30CCY"
           strategy="afterInteractive"
