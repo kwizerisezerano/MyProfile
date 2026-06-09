@@ -29,7 +29,7 @@ export default function Contact() {
         icon: MapPin,
         label: t('contact.labels.location'),
         value: t('contact.location_value'),
-        href: 'https://www.google.com/maps/search/?api=1&query=Kigali+Gisozi+Rwanda',
+        href: 'https://www.google.com/maps/place/KWIZERISEZERANO/@-1.9395561,30.130194,1086m/data=!3m1!1e3!4m14!1m7!3m6!1s0x19dca75a688649f1:0x42ab5f708ad476c4!2sKWIZERISEZERANO!8m2!3d-1.9395615!4d30.1327689!16s%2Fg%2F11zfmdxw3v!3m5!1s0x19dca75a688649f1:0x42ab5f708ad476c4!8m2!3d-1.9395615!4d30.1327689!16s%2Fg%2F11zfmdxw3v?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D',
       },
   ]
 
