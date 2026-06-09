@@ -37,7 +37,7 @@ export default function Dashboard() {
 
   const totalVisits = visitors.length
   const uniqueIPs = new Set(visitors.map((v) => v.ip)).size
-  const countries = [...new Set(visitors.map((v) => v.country))]
+  const countries = Array.from(new Set(visitors.map((v) => v.country)))
   const mobile = visitors.filter((v) => v.device === 'Mobile').length
   const desktop = visitors.filter((v) => v.device === 'Desktop').length
 
