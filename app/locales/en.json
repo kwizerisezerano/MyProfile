@@ -143,6 +143,11 @@
         "title": "Smart Market MIS",
         "description": "Intelligent Market Management Solution",
         "longDescription": "Feature-rich market management system with analytics, vendor portal, and automated reporting capabilities."
+      },
+      "tontinehub": {
+        "title": "TontineHub",
+        "description": "Save Together. Grow Together. Win Together.",
+        "longDescription": "TontineHub replaces messy group chats and paper records with one powerful platform. No spreadsheets. No confusion. Every franc tracked in real-time. Loans approved in minutes. 10,000+ members already saving."
       }
     }
   },

@@ -143,6 +143,11 @@
         "title": "Smart Market MIS",
         "description": "Solution intelligente de gestion de marché",
         "longDescription": "Système de gestion de marché riche en fonctionnalités avec des analyses, un portail pour les vendeurs et des capacités de reporting automatisé."
+      },
+      "tontinehub": {
+        "title": "TontineHub",
+        "description": "Épargnez Ensemble. Grandissez Ensemble. Gagnez Ensemble.",
+        "longDescription": "TontineHub remplace les discussions de groupe désordonnées et les dossiers papier par une seule plateforme puissante. Pas de tableurs. Pas de confusion. Chaque franc suivi en temps réel. Prêts approuvés en quelques minutes. Plus de 10 000 membres épargnent déjà."
       }
     }
   },

@@ -36,6 +36,16 @@ export default function Projects() {
     },
     {
       id: 2,
+      title: t('projects.items.tontinehub.title'),
+      description: t('projects.items.tontinehub.description'),
+      longDescription: t('projects.items.tontinehub.longDescription'),
+      image: '/images/projects/tontinehub.jpg',
+      tags: ['FinTech', 'Savings', 'React', 'Node.js', 'PostgreSQL'],
+      link: '#',
+      featured: true
+    },
+    {
+      id: 3,
       title: t('projects.items.geco.title'),
       description: t('projects.items.geco.description'),
       longDescription: t('projects.items.geco.longDescription'),
@@ -45,7 +55,7 @@ export default function Projects() {
       featured: true
     },
     {
-      id: 3,
+      id: 4,
       title: t('projects.items.tmis.title'),
       description: t('projects.items.tmis.description'),
       longDescription: t('projects.items.tmis.longDescription'),
@@ -56,7 +66,7 @@ export default function Projects() {
       featured: true
     },
     {
-      id: 4,
+      id: 5,
       title: t('projects.items.menya.title'),
       description: t('projects.items.menya.description'),
       longDescription: t('projects.items.menya.longDescription'),
@@ -66,7 +76,17 @@ export default function Projects() {
       featured: true
     },
     {
-      id: 5,
+      id: 6,
+      title: t('projects.items.tontinehub.title'),
+      description: t('projects.items.tontinehub.description'),
+      longDescription: t('projects.items.tontinehub.longDescription'),
+      image: '/images/projects/tontinehub.jpg',
+      tags: ['FinTech', 'Savings', 'React', 'Node.js', 'PostgreSQL'],
+      link: '#',
+      featured: false
+    },
+    {
+      id: 7,
       title: t('projects.items.marketspot.title'),
       description: t('projects.items.marketspot.description'),
       longDescription: t('projects.items.marketspot.longDescription'),
@@ -76,7 +96,7 @@ export default function Projects() {
       featured: false
     },
     {
-      id: 6,
+      id: 8,
       title: t('projects.items.smartmarket.title'),
       description: t('projects.items.smartmarket.description'),
       longDescription: t('projects.items.smartmarket.longDescription'),
@@ -216,7 +236,7 @@ export default function Projects() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {otherProjects.map((project) => {
                 // Get icon based on project
-                const ProjectIcon = project.id === 5 ? Store : project.id === 6 ? BarChart3 : ArrowUpRight;
+                const ProjectIcon = project.id === 7 ? Store : project.id === 8 ? BarChart3 : ArrowUpRight;
                 
                 return (
                 <div
