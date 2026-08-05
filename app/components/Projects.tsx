@@ -76,6 +76,16 @@ export default function Projects() {
       featured: true
     },
     {
+      id: 9,
+      title: t('projects.items.elverbuena.title'),
+      description: t('projects.items.elverbuena.description'),
+      longDescription: t('projects.items.elverbuena.longDescription'),
+      image: '/images/projects/elbuvela project profiile.jpg',
+      tags: ['Graphic Design', 'UI Design', 'Portfolio', 'Branding'],
+      link: 'https://el-verbuena-portifolio-git-main-robertmugabos-projects.vercel.app/',
+      featured: true
+    },
+    {
       id: 6,
       title: t('projects.items.tontinehub.title'),
       description: t('projects.items.tontinehub.description'),

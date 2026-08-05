@@ -144,6 +144,11 @@
         "description": "Solution intelligente de gestion de marché",
         "longDescription": "Système de gestion de marché riche en fonctionnalités avec des analyses, un portail pour les vendeurs et des capacités de reporting automatisé."
       },
+      "elverbuena": {
+        "title": "El Verbuena",
+        "description": "Portfolio de Designer Graphique & UI",
+        "longDescription": "Un site portfolio moderne et élégant pour un Designer Graphique et UI, présentant des œuvres créatives, des projets de branding et une expertise en design visuel. Construit avec une esthétique épurée qui reflète l'identité créative du designer."
+      },
       "tontinehub": {
         "title": "TontineHub",
         "description": "Épargnez Ensemble. Grandissez Ensemble. Gagnez Ensemble.",
