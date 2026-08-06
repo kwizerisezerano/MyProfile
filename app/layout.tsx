@@ -10,21 +10,21 @@ import VisitorTracker from './components/VisitorTracker'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kwizerisezerano.vercel.app'),
+  metadataBase: new URL('https://my-profile-sandy-ten.vercel.app'),
   title: {
     default: 'KWIZERISEZERANO - Software Developer',
     template: '%s | KWIZERISEZERANO',
   },
   description: 'Software Developer specializing in Backend Development with Golang, Python, Node.js, PHP, Docker, and cloud technologies. Based in Kigali, Rwanda.',
   keywords: ['Software Developer', 'Backend Developer', 'Golang', 'Python', 'PHP', 'Node.js', 'Docker', 'PostgreSQL', 'Redis', 'Kigali', 'Rwanda'],
-  authors: [{ name: 'KWIZERISEZERANO', url: 'https://kwizerisezerano.vercel.app' }],
+  authors: [{ name: 'KWIZERISEZERANO', url: 'https://my-profile-sandy-ten.vercel.app' }],
   creator: 'KWIZERISEZERANO',
-  alternates: { canonical: 'https://kwizerisezerano.vercel.app' },
+  alternates: { canonical: 'https://my-profile-sandy-ten.vercel.app' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {
     title: 'KWIZERISEZERANO - Software Developer',
     description: 'Software Developer specializing in Backend Development with Golang, Python, Node.js, PHP and cloud technologies.',
-    url: 'https://kwizerisezerano.vercel.app',
+    url: 'https://my-profile-sandy-ten.vercel.app',
     siteName: 'KWIZERISEZERANO Portfolio',
     locale: 'en_US',
     type: 'website',

@@ -4,16 +4,16 @@ import Services from '../components/Services'
 import Footer from '../components/Footer'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kwizerisezerano.vercel.app'),
+  metadataBase: new URL('https://my-profile-sandy-ten.vercel.app'),
   title: 'Services - KWIZERISEZERANO | Software Developer',
   description: 'Services offered by KWIZERISEZERANO: Web Development, Backend Development, Mobile App Development, Database Design, Software Testing, Information Security and more.',
   keywords: ['Services', 'Web Development', 'Backend Development', 'Mobile App', 'Database Design', 'Software Testing', 'KWIZERISEZERANO'],
   authors: [{ name: 'KWIZERISEZERANO' }],
-  alternates: { canonical: 'https://kwizerisezerano.vercel.app/services' },
+  alternates: { canonical: 'https://my-profile-sandy-ten.vercel.app/services' },
   openGraph: {
     title: 'Services - KWIZERISEZERANO | Software Developer',
     description: 'Web Development, Backend Development, Mobile App, Database Design, Software Testing and more.',
-    url: 'https://kwizerisezerano.vercel.app/services',
+    url: 'https://my-profile-sandy-ten.vercel.app/services',
     type: 'website',
     siteName: 'KWIZERISEZERANO Portfolio',
   },

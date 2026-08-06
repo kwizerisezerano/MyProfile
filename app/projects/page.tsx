@@ -4,16 +4,16 @@ import Projects from '../components/Projects'
 import Footer from '../components/Footer'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kwizerisezerano.vercel.app'),
+  metadataBase: new URL('https://my-profile-sandy-ten.vercel.app'),
   title: 'Projects - KWIZERISEZERANO | Software Developer',
   description: 'Featured projects by KWIZERISEZERANO: Leazi (Property SaaS), TontineHub (Group Savings), GECO Rwanda (Healthcare), TMIS, Menya-Tech and more.',
   keywords: ['Projects', 'Leazi', 'TontineHub', 'GECO Rwanda', 'TMIS', 'Menya-Tech', 'Portfolio', 'KWIZERISEZERANO'],
   authors: [{ name: 'KWIZERISEZERANO' }],
-  alternates: { canonical: 'https://kwizerisezerano.vercel.app/projects' },
+  alternates: { canonical: 'https://my-profile-sandy-ten.vercel.app/projects' },
   openGraph: {
     title: 'Projects - KWIZERISEZERANO | Software Developer',
     description: 'Featured projects: Leazi, TontineHub, GECO Rwanda, TMIS, Menya-Tech and more.',
-    url: 'https://kwizerisezerano.vercel.app/projects',
+    url: 'https://my-profile-sandy-ten.vercel.app/projects',
     type: 'website',
     siteName: 'KWIZERISEZERANO Portfolio',
   },

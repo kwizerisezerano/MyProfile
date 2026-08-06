@@ -4,16 +4,16 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kwizerisezerano.vercel.app'),
+  metadataBase: new URL('https://my-profile-sandy-ten.vercel.app'),
   title: 'Contact - KWIZERISEZERANO | Software Developer',
   description: 'Get in touch with KWIZERISEZERANO, Software Developer based in Kigali, Rwanda. Available for freelance projects and collaborations.',
   keywords: ['Contact', 'KWIZERISEZERANO', 'Hire Developer', 'Kigali Rwanda', 'Freelance Developer', 'Software Developer Rwanda'],
   authors: [{ name: 'KWIZERISEZERANO' }],
-  alternates: { canonical: 'https://kwizerisezerano.vercel.app/contact' },
+  alternates: { canonical: 'https://my-profile-sandy-ten.vercel.app/contact' },
   openGraph: {
     title: 'Contact - KWIZERISEZERANO | Software Developer',
     description: 'Get in touch with KWIZERISEZERANO, Software Developer based in Kigali, Rwanda.',
-    url: 'https://kwizerisezerano.vercel.app/contact',
+    url: 'https://my-profile-sandy-ten.vercel.app/contact',
     type: 'website',
     siteName: 'KWIZERISEZERANO Portfolio',
   },

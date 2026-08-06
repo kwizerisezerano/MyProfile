@@ -4,16 +4,16 @@ import Experience from '../components/Experience'
 import Footer from '../components/Footer'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kwizerisezerano.vercel.app'),
+  metadataBase: new URL('https://my-profile-sandy-ten.vercel.app'),
   title: 'Experience - KWIZERISEZERANO | Software Developer',
   description: 'Professional experience of KWIZERISEZERANO: Back-End Developer at Qonics Inc, Teacher at Lycee Saint Alexandre Sauli de Muhura and Bright Academy TSS. BSc IT at University of Kigali.',
   keywords: ['Experience', 'Qonics Inc', 'Backend Developer', 'Teacher', 'University of Kigali', 'RP Tumba', 'KWIZERISEZERANO'],
   authors: [{ name: 'KWIZERISEZERANO' }],
-  alternates: { canonical: 'https://kwizerisezerano.vercel.app/experience' },
+  alternates: { canonical: 'https://my-profile-sandy-ten.vercel.app/experience' },
   openGraph: {
     title: 'Experience - KWIZERISEZERANO | Software Developer',
     description: 'Back-End Developer at Qonics Inc, Teacher, BSc IT at University of Kigali.',
-    url: 'https://kwizerisezerano.vercel.app/experience',
+    url: 'https://my-profile-sandy-ten.vercel.app/experience',
     type: 'website',
     siteName: 'KWIZERISEZERANO Portfolio',
   },
