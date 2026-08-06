@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   creator: 'KWIZERISEZERANO',
   alternates: { canonical: 'https://my-profile-sandy-ten.vercel.app' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  verification: { google: 'llu6iSyV2t715GLUL3_rV1ayr36rSdua8_v0Um_eMsI' },
   openGraph: {
     title: 'KWIZERISEZERANO - Software Developer',
     description: 'Software Developer specializing in Backend Development with Golang, Python, Node.js, PHP and cloud technologies.',
