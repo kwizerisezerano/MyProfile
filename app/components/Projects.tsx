@@ -86,16 +86,6 @@ export default function Projects() {
       featured: true
     },
     {
-      id: 6,
-      title: t('projects.items.tontinehub.title'),
-      description: t('projects.items.tontinehub.description'),
-      longDescription: t('projects.items.tontinehub.longDescription'),
-      image: '/images/projects/tontinehub.jpg',
-      tags: ['FinTech', 'Savings', 'React', 'Node.js', 'PostgreSQL'],
-      link: '#',
-      featured: false
-    },
-    {
       id: 7,
       title: t('projects.items.marketspot.title'),
       description: t('projects.items.marketspot.description'),
