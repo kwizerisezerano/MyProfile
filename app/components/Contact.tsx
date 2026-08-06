@@ -76,6 +76,8 @@ export default function Contact() {
               <a
                 key={item.label}
                 href={item.href}
+                target={item.href.startsWith('mailto:') ? '_self' : '_blank'}
+                rel="noopener noreferrer"
                 className={`p-6 rounded-xl border transition-all duration-200 group ${isDark ? 'bg-dark-800 border-dark-700 hover:border-primary-500/30' : 'bg-white border-gray-200 hover:border-primary-500/50 shadow-sm'}`}
               >
                 <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 transition-colors ${isDark ? 'bg-dark-700 group-hover:bg-primary-500/20' : 'bg-primary-50 group-hover:bg-primary-100'}`}>

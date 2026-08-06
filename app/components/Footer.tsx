@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Code2, Heart, Github, Linkedin, Mail, ArrowUp, X, Facebook, Instagram } from 'lucide-react'
+import { Code2, Heart, Github, Linkedin, Mail, ArrowUp, X, Facebook, Instagram, MessageCircle } from 'lucide-react'
 import { useLanguage } from './LanguageProvider'
 import Link from 'next/link'
 
@@ -25,6 +25,7 @@ export default function Footer() {
     { icon: Facebook, href: 'https://www.facebook.com/kwizerisezerano.tabitha', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/tabithakwizerisezerano/', label: 'Instagram' },
     { icon: Mail, href: 'mailto:tabitakwizerisezerano@gmail.com', label: 'Email' },
+    { icon: MessageCircle, href: 'https://wa.me/250790989830?text=Hi%20KWIZERISEZERANO%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project%20with%20you.', label: 'WhatsApp' },
   ]
 
   const scrollToTop = () => {
@@ -52,7 +53,7 @@ export default function Footer() {
                 <a
                   key={social.label}
                   href={social.href}
-                  target="_blank"
+                  target={social.href.startsWith('mailto:') ? '_self' : '_blank'}
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-lg bg-dark-700/50 hover:bg-primary-500/30 flex items-center justify-center text-primary-400 hover:text-primary-300 transition-all duration-200"
                   aria-label={social.label}

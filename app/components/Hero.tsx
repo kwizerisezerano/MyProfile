@@ -1,6 +1,6 @@
 'use client'
 
-import { Github, Linkedin, Mail, ChevronDown, Terminal, X, Facebook, Instagram } from 'lucide-react'
+import { Github, Linkedin, Mail, ChevronDown, Terminal, X, Facebook, Instagram, MessageCircle } from 'lucide-react'
 import { useTheme } from './ThemeProvider'
 import { useLanguage } from './LanguageProvider'
 
@@ -78,11 +78,12 @@ export default function Hero() {
                 { icon: Facebook, href: 'https://www.facebook.com/kwizerisezerano.tabitha', label: 'Facebook' },
                 { icon: Instagram, href: 'https://www.instagram.com/tabithakwizerisezerano/', label: 'Instagram' },
                 { icon: Mail, href: 'mailto:tabitakwizerisezerano@gmail.com', label: 'Email' },
+                { icon: MessageCircle, href: 'https://wa.me/250790989830?text=Hi%20KWIZERISEZERANO%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project%20with%20you.', label: 'WhatsApp' },
               ].map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
-                  target="_blank"
+                  target={social.href.startsWith('mailto:') ? '_self' : '_blank'}
                   rel="noopener noreferrer"
                   className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-200 ${
                     isDark 
