@@ -23,7 +23,7 @@ export default function Contact() {
       icon: Phone,
       label: t('contact.labels.phone'),
       value: '+250 790 989 830',
-      href: 'https://wa.me/250790989830',
+      href: 'https://wa.me/250790989830?text=Hi%20KWIZERISEZERANO%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project%20with%20you.',
     },
     {
         icon: MapPin,
@@ -89,7 +89,7 @@ export default function Contact() {
 
           {/* WhatsApp Button - Same style in both modes: primary-500 bg, white text */}
           <a
-            href="https://wa.me/250790989830"
+            href="https://wa.me/250790989830?text=Hi%20KWIZERISEZERANO%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project%20with%20you."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full py-4 font-medium rounded-lg transition-colors duration-200 bg-primary-500 hover:bg-primary-600 text-white shadow-lg shadow-primary-500/25"
