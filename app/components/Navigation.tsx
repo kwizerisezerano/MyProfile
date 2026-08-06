@@ -15,7 +15,7 @@ const navItems = [
   { name: 'navigation.services', href: '/services' },
   { name: 'navigation.projects', href: '/projects' },
   { name: 'navigation.experience', href: '/experience' },
-  { name: 'navigation.contributions', href: '/#contributions' },
+  { name: 'navigation.contributions', href: '/contributions' },
   { name: 'navigation.contact', href: '/contact' },
 ]
 
