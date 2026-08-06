@@ -320,7 +320,7 @@ const query = \`
   };
 
   const styles: Record<string, CSSProperties> = {
-    section:     { fontFamily: "'Montserrat', sans-serif", padding: "32px 0 0", backgroundColor: "transparent", ...styleProp },
+    section:     { fontFamily: "'Montserrat', sans-serif", padding: "100px 0 0", backgroundColor: "transparent", ...styleProp },
     card:        { backgroundColor: surface, border: `1px solid ${border}`, borderRadius: 16, padding: "28px 32px", boxShadow: isDark ? "0 4px 20px rgba(74, 222, 128, 0.08)" : "0 4px 20px rgba(0,0,0,0.08)" },
     topBar:      { display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginBottom: 20 },
     usernameRow: { display: "flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 600, color: titleColor },
