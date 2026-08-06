@@ -3,6 +3,7 @@
 import React from 'react'
 import { Code2, Heart, Github, Linkedin, Mail, ArrowUp, X, Facebook, Instagram } from 'lucide-react'
 import { useLanguage } from './LanguageProvider'
+import Link from 'next/link'
 
 const currentYear = new Date().getFullYear()
 
@@ -10,11 +11,11 @@ export default function Footer() {
   const { t } = useLanguage()
 
   const footerLinks = [
-    { name: t('navigation.home'), href: '#home' },
-    { name: t('navigation.about'), href: '#about' },
-    { name: t('navigation.experience'), href: '#experience' },
-    { name: t('navigation.projects'), href: '#projects' },
-    { name: t('navigation.contact'), href: '#contact' },
+    { name: t('navigation.home'), href: '/' },
+    { name: t('navigation.about'), href: '/about' },
+    { name: t('navigation.experience'), href: '/experience' },
+    { name: t('navigation.projects'), href: '/projects' },
+    { name: t('navigation.contact'), href: '/contact' },
   ]
 
   const socialLinks = [
@@ -36,16 +37,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-2">
-            <a 
-              href="#home"
-              onClick={(e) => {
-                e.preventDefault()
-                window.scrollTo({ top: 0, behavior: 'smooth' })
-              }}
+            <Link 
+              href="/"
               className="text-2xl font-bold text-white mb-4 block"
             >
               {t('navigation.home_name')}
-            </a>
+            </Link>
             <p className="text-gray-400 text-sm mb-4 max-w-md">
               {t('footer.description')}
             </p>
@@ -72,17 +69,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.map((link) => (
                 <li key={link.name}>
-                  <a
+                  <Link
                     href={link.href}
-                    onClick={(e) => {
-                      e.preventDefault()
-                      const element = document.querySelector(link.href)
-                      if (element) element.scrollIntoView({ behavior: 'smooth' })
-                    }}
                     className="text-sm text-gray-400 hover:text-primary-400 transition-colors duration-200"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -94,16 +86,12 @@ export default function Footer() {
             <p className="text-sm text-gray-400 mb-4">
               {t('footer.connect_desc')}
             </p>
-            <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault()
-                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
-              }}
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm font-medium rounded-lg transition-colors duration-200"
             >
               {t('footer.get_in_touch')}
-            </a>
+            </Link>
           </div>
         </div>
 
