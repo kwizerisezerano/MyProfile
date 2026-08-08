@@ -124,21 +124,38 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className={`md:hidden mt-4 pb-4 border-t ${isDark ? 'border-dark-700' : 'border-gray-200'}`}>
-            <div className="flex flex-col gap-2 pt-4">
+          <div
+            className={`md:hidden mt-3 rounded-2xl border px-4 py-3 shadow-2xl backdrop-blur-xl ${
+              isDark
+                ? 'bg-dark-900/95 border-dark-700'
+                : 'bg-white/95 border-gray-200 shadow-gray-300/70'
+            }`}
+          >
+            <div className="flex flex-col gap-1">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`transition-colors duration-200 py-2 text-sm font-medium ${
-                    pathname === item.href
-                      ? 'text-primary-400'
-                      : isDark ? 'text-gray-300 hover:text-primary-400' : 'text-gray-600 hover:text-primary-600'
-                  }`}
-                >
-                  {t(item.name)}
-                </Link>
+                item.name === 'navigation.contact' ? (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="transition-colors duration-200 rounded-lg px-2 py-2 text-sm font-medium text-white bg-primary-500 hover:bg-primary-600 shadow-lg shadow-primary-500/25"
+                  >
+                    {t(item.name)}
+                  </Link>
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`transition-colors duration-200 rounded-lg px-2 py-2 text-sm font-medium ${
+                      pathname === item.href
+                        ? 'text-primary-400'
+                        : isDark ? 'text-gray-300 hover:text-primary-400' : 'text-gray-600 hover:text-primary-600'
+                    }`}
+                  >
+                    {t(item.name)}
+                  </Link>
+                )
               ))}
             </div>
           </div>
